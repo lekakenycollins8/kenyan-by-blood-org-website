@@ -20,7 +20,7 @@ export default function EventsSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center justify-center space-x-2 bg-[#006600]/10 text-[#006600] px-4 py-2 rounded-full mb-4">
+          <div className="inline-flex items-center justify-center space-x-2 px-4 py-2 rounded-full mb-4">
             <Calendar className="h-4 w-4" />
             <span className="font-semibold text-sm">Upcoming Events</span>
           </div>

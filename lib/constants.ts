@@ -9,7 +9,7 @@ export const BRAND_COLORS = {
 // Navigation links
 export const NAV_LINKS = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
+  { name: "About Us", path: "/about" },
   { name: "Our Impact", path: "/impact" },
   { name: "Donate", path: "/donate" },
   { name: "Partner With Us", path: "/partner" },
@@ -20,10 +20,26 @@ export const NAV_LINKS = [
 
 // Social media links
 export const SOCIAL_LINKS = [
-  { name: "Facebook", icon: "facebook", url: "https://facebook.com" },
-  { name: "Twitter", icon: "twitter", url: "https://twitter.com" },
-  { name: "Instagram", icon: "instagram", url: "https://instagram.com" },
-  { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com" },
+  {
+    name: "Facebook",
+    url: "https://facebook.com",
+    icon: "facebook",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com",
+    icon: "twitter",
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com",
+    icon: "instagram",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com",
+    icon: "linkedin",
+  },
 ];
 
 // Footer links grouped by category
