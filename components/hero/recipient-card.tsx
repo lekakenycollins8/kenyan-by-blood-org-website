@@ -53,9 +53,6 @@ export default function RecipientCard() {
               "The blood donation I received saved my life after childbirth complications. I'm forever grateful to the
               donors who made it possible for me to see my daughter grow."
             </p>
-            <Link href="/stories" className="text-[#DC241f] text-sm font-medium hover:underline flex items-center">
-              Read more stories <ArrowRight size={14} className="ml-1" />
-            </Link>
           </div>
         </div>
 

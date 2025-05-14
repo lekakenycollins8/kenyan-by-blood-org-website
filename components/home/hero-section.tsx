@@ -10,7 +10,7 @@ import BottomCards from "@/components/hero/bottom-cards"
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center">
+    <section className="relative min-h-[calc(110vh-10rem)] flex flex-col">
       {/* Urgent Need Banner */}
       <UrgentNeedBanner />
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-20 pt-24">
+      <div className="container mx-auto px-4 relative z-20 pt-24 flex-grow flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column - Text Content */}
           <div className="lg:col-span-7 text-white space-y-6">
@@ -52,14 +52,16 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column - Blood recipient image and next donation info */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 flex flex-col justify-center">
             <RecipientCard />
           </div>
         </div>
       </div>
 
-      {/* Bottom Cards */}
-      <BottomCards />
+      {/* Bottom Cards - with padding to prevent overlap */}
+      <div className="relative pb-[calc(6rem+1.5rem)] z-20">
+        <BottomCards />
+      </div>
     </section>
   )
 }
