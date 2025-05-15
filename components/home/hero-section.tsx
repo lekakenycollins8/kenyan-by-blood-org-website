@@ -41,7 +41,7 @@ export default function HeroSection() {
         ></div>
 
         {/* Content */}
-        <div className="container mx-auto px-4 relative z-20 pt-24 flex-grow flex items-center">
+        <div className="container mx-auto px-4 relative z-20 pt-24 pb-32 md:pb-40 flex-grow flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Column - Text Content */}
             <div className="lg:col-span-7 text-white space-y-6">

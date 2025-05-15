@@ -20,12 +20,13 @@ export default function Footer() {
                 strokeWidth={1.5} 
               />
               <span className="text-2xl font-bold">
-                <span className="text-[#DC241f]">D</span>ona
-                <span className="text-[#006600]">K</span>enya
+                <span className="text-[#DC241f]">K</span>enyan
+                <span className="text-[#DC241f]">B</span>y
+                <span className="text-[#006600]">B</span>lood
               </span>
             </Link>
             <p className="text-gray-300 max-w-md">
-              DonaKenya is a leading blood donation NGO in Kenya, committed to ensuring 
+              KenyanByBlood is a leading blood donation NGO in Kenya, committed to ensuring 
               a safe and sufficient blood supply throughout the country.
             </p>
             <div className="flex space-x-4">
@@ -52,24 +53,6 @@ export default function Footer() {
               })}
             </div>
           </div>
-          
-          <div className="col-span-1 lg:col-span-1">
-            <h3 className="text-xl font-bold mb-6">Join Our Community</h3>
-            <p className="text-gray-300 mb-4">
-              Subscribe to receive updates on blood drives, success stories, and ways to get involved.
-            </p>
-            <form className="space-y-3">
-              <Input 
-                type="email" 
-                placeholder="Your email address" 
-                className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-              />
-              <Button variant="primary" className="w-full">
-                Subscribe
-              </Button>
-            </form>
-          </div>
-          
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
               <div>
@@ -78,7 +61,7 @@ export default function Footer() {
                   <p>123 Kimathi Street</p>
                   <p>Nairobi, Kenya</p>
                   <p className="mt-2">+254 123 456 789</p>
-                  <p>info@donakenya.org</p>
+                  <p>info@kenyanbyblood.org</p>
                 </address>
               </div>
               <div>
@@ -117,7 +100,7 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} DonaKenya. All rights reserved. NGO Registration #12345
+            © {currentYear} KenyanByBlood. All rights reserved. NGO Registration #12345
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0 text-sm text-gray-400">
             <Link href="/privacy" className="hover:text-white">

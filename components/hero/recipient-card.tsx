@@ -8,13 +8,13 @@ import { ArrowRight } from "lucide-react"
 export default function RecipientCard() {
   return (
     <motion.div
-      className="relative rounded-xl overflow-hidden shadow-xl h-full"
+      className="relative rounded-xl overflow-hidden shadow-xl max-h-[550px] md:max-h-[600px] lg:max-h-[800px] lg:h-auto lg:max-h-none"
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.3, duration: 0.6 }}
     >
       {/* Main Image */}
-      <div className="aspect-[4/5] relative h-full">
+      <div className="aspect-[4/5] relative">
         <Image
           src="/images/blood-recipient.jpg"
           alt="Smiling blood transfusion recipient"
