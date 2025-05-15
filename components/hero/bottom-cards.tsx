@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export default function BottomCards() {
   return (
-    <div className="absolute bottom-0 left-0 right-0 z-20 transform translate-y-1/2">
+    <div className="absolute bottom-0 left-0 right-0 z-20 transform translate-y-1/3 sm:translate-y-1/2">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <motion.div
