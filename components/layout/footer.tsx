@@ -53,6 +53,22 @@ export default function Footer() {
               })}
             </div>
           </div>
+          <div className="col-span-1 lg:col-span-1">
+            <h3 className="text-xl font-bold mb-6">Join Our Community</h3>
+            <p className="text-gray-300 mb-4">
+              Subscribe to receive updates on blood drives, success stories, and ways to get involved.
+            </p>
+            <form className="space-y-3">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+              />
+              <Button variant="primary" className="w-full">
+                Subscribe
+              </Button>
+            </form>
+          </div>
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
               <div>
