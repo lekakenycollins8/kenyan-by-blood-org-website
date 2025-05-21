@@ -9,6 +9,12 @@ const config = {
   ],
   theme: {
     extend: {
+      clipPath: {
+        'wave-down': 'path("M0,24 C150,80 350,0 500,24 L500,00 L0,0 Z")',
+        'wave-up': 'path("M0,0 C150,24 350,-56 500,0 L500,24 L0,24 Z")',
+        diagonal: 'polygon(0 0, 100% 0, 80% 100%, 0% 100%)',
+        drop: 'polygon(50% 0%, 100% 75%, 50% 100%, 0% 75%)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -78,10 +84,12 @@ const config = {
             height: '0',
           },
         },
+        pulse: { '0%, 100%': { opacity: 1 }, '50%': { opacity: 0.6 } }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-slow': 'pulse 2s ease-in-out infinite'
       },
     },
   },

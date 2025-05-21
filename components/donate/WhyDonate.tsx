@@ -93,7 +93,7 @@ export default function WhyDonate({ data }: { data: WhyDonateProps }) {
     <section
       ref={sectionRef}
       aria-labelledby="why-donate-title"
-      className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-white"
+      className="relative py-24 md:py-32 overflow-hidden bg-white"
     >
       {/* Organic Background Shape */}
       <div
@@ -244,36 +244,6 @@ export default function WhyDonate({ data }: { data: WhyDonateProps }) {
             </motion.div>
         </div>
       </div>
-
-      {/* Call-to-Action Sticky Bar */}
-      <AnimatePresence>
-        {showStickyCta && (
-          <motion.div
-            className="fixed bottom-0 left-0 right-0 bg-[#DC241f] text-white py-3 z-50"
-            variants={stickyCTAVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            <div className="container mx-auto px-4 flex items-center justify-between">
-              <p className="text-sm md:text-base font-medium">Ready to make a difference?</p>
-              <Button
-                variant="outline"
-                size="sm"
-                className="text-white border-white hover:bg-white/20"
-                onClick={() => {
-                  const donationForm = document.getElementById("donation-form")
-                  if (donationForm) {
-                    donationForm.scrollIntoView({ behavior: "smooth" })
-                  }
-                }}
-              >
-                Donate Now
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   )
 }

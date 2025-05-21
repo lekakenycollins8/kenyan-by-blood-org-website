@@ -51,9 +51,9 @@ export default function ImpactSection() {
             <Heart className="h-4 w-4 fill-[#DC241f]" />
             <span className="font-semibold text-sm">Our Impact</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4">KBBF's Impact in One Year</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4">Our Impact in One Year</h2>
           <p className="text-gray-600 text-base sm:text-lg px-4">
-            Since its inception in September 2023, KBBF has made significant strides in raising awareness and increasing
+            Since our inception in September 2023, we have made significant strides in raising awareness and increasing
             blood donations. Through organized blood drives across various counties, KBBF has collected over 73,000
             pints of blood, impacting the lives of an estimated 200,000 individuals.
           </p>
