@@ -53,7 +53,7 @@ export default function Footer() {
                     className="bg-white/10 p-2 rounded-full hover:bg-[#DC241f] transition-colors"
                     aria-label={social.name}
                   >
-                    <IconComponent size={18} />
+                    {IconComponent && <IconComponent size={18} />}
                   </a>
                 );
               })}
@@ -70,7 +70,7 @@ export default function Footer() {
                 placeholder="Your email address"
                 className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               />
-              <Button variant="primary" className="w-full">
+              <Button variant="default" className="w-full">
                 Subscribe
               </Button>
             </form>

@@ -1,88 +1,280 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-import { donatePageData } from "@/data/donate"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { Heart } from "lucide-react"
+import { motion, useInView, AnimatePresence } from "framer-motion"
+import { Heart, ChevronDown, ChevronUp, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-export default function WhyDonate() {
-  const { whyDonate } = donatePageData
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+interface WhyDonateProps {
+  title: string
+  paragraphs: string[]
+  image: string
+  alt?: string
+  quote?: string
+}
+
+export default function WhyDonate({ data }: { data: WhyDonateProps }) {
+  // Destructure data
+  const { title, paragraphs, image, alt, quote } = data
+
+  // State for "Read More" functionality
+  const [expanded, setExpanded] = useState(false)
+
+  // State for sticky CTA bar
+  const [showStickyCta, setShowStickyCta] = useState(false)
+
+  // Refs for scroll detection
+  const sectionRef = useRef<HTMLElement>(null)
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 })
+
+  // Handle scroll for sticky CTA
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return
+
+      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom
+      const windowHeight = window.innerHeight
+
+      // Show sticky CTA when section bottom is above viewport
+      if (sectionBottom < windowHeight * 0.5) {
+        setShowStickyCta(true)
+      } else {
+        setShowStickyCta(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Animation variants
+  const imageVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8 },
+    },
+  }
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  }
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  }
+
+  const stickyCTAVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 300, damping: 30 },
+    },
+  }
 
   return (
-    <section ref={ref} className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              {/* Main Image */}
-              <div className="aspect-[4/3] relative">
+    <section
+      ref={sectionRef}
+      aria-labelledby="why-donate-title"
+      className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-white"
+    >
+      {/* Organic Background Shape */}
+      <div
+        className="absolute right-0 top-1/4 w-[70%] h-[70%] bg-[#006600]/10 rounded-[40%_60%_70%_30%/30%_40%_70%_60%] -z-10"
+        aria-hidden="true"
+      />
+
+      <div className="container mx-auto px-4 relative">
+        <div className="relative min-h-[600px] lg:min-h-[700px]">
+          {/* Diagonal Split Layout */}
+          <div className="absolute inset-0 w-full h-full">
+            {/* Image Panel with diagonal clip */}
+            <motion.div
+              className="absolute top-0 left-0 w-full md:w-[65%] h-[60%] md:h-full"
+              style={{
+                clipPath: "polygon(0 0, 100% 0, 70% 100%, 0 100%)", // Diagonal clip
+              }}
+              variants={imageVariants}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              whileHover={{ scale: 1.02, rotateY: 2, rotateX: -1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="relative w-full h-full overflow-hidden">
                 <Image
-                  src={whyDonate.image || "/placeholder.svg"}
-                  alt="Blood donation in Kenya"
+                  src={image || "/placeholder.svg"}
+                  alt={alt || "Blood donation in Kenya"}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 65vw"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent" />
               </div>
 
-              {/* Image Overlay Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-[#DC241f] flex items-center justify-center">
-                    <Heart className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">Every Donation Matters</h3>
-                </div>
+              {/* Emotional Quote Overlay */}
+              <div className="absolute bottom-[20%] left-[10%] max-w-md z-10">
+                <motion.p
+                  className="text-2xl md:text-3xl italic text-white drop-shadow-lg font-medium"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                >
+                  {quote || "Your gift is someone's second chance at life."}
+                </motion.p>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-[#006600]/20 rounded-2xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-[#DC241f]/20 rounded-2xl -z-10"></div>
-          </motion.div>
+            {/* Text Content Panel */}
+            <motion.div
+              className="absolute bottom-0 right-0 w-full md:w-[60%] h-[60%] md:h-[70%] bg-white/80 backdrop-blur-sm rounded-tl-3xl p-6 md:p-10 lg:p-16"
+              variants={textVariants}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+            >
+              {/* Badge */}
+              <motion.div
+                className="inline-flex items-center space-x-2 bg-[#DC241f]/10 text-[#DC241f] px-4 py-2 rounded-full mb-6"
+                variants={paragraphVariants}
+              >
+                <Heart className="h-4 w-4" />
+                <span className="font-semibold text-sm">Why It Matters</span>
+              </motion.div>
 
-          {/* Right Column - Text Content */}
+              {/* Heading */}
+              <motion.h2
+                id="why-donate-title"
+                className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-gray-900 leading-tight"
+                variants={paragraphVariants}
+              >
+                {title}
+              </motion.h2>
+
+              {/* Interactive "Reveal" Paragraphs */}
+              <div className="space-y-6">
+                <motion.p className="text-lg text-gray-700 leading-relaxed" variants={paragraphVariants}>
+                  {paragraphs[0]}
+                </motion.p>
+
+                <AnimatePresence>
+                  {expanded && (
+                    <motion.div
+                      className="space-y-6 max-h-[500px] overflow-y-auto"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {paragraphs.slice(1).map((paragraph, index) => (
+                        <p key={index} className="text-lg text-gray-700 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {paragraphs.length > 1 && (
+                  <button
+                    onClick={() => setExpanded(!expanded)}
+                    className="text-[#DC241f] font-medium flex items-center hover:underline focus:outline-none focus:ring-2 focus:ring-[#DC241f] focus:ring-offset-2 rounded-md"
+                    aria-expanded={expanded}
+                  >
+                    {expanded ? (
+                      <>
+                        Read Less <ChevronUp className="ml-1 h-4 w-4" />
+                      </>
+                    ) : (
+                      <>
+                        Read More <ChevronDown className="ml-1 h-4 w-4" />
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
+
+              {/* CTA Button */}
+              <motion.div className="mt-10" variants={paragraphVariants}>
+                <Button
+                  className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full group"
+                  onClick={() => {
+                    const donationForm = document.getElementById("donation-form")
+                    if (donationForm) {
+                      donationForm.scrollIntoView({ behavior: "smooth" })
+                    }
+                  }}
+                >
+                  Donate Now
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Animated Icon Accent */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute left-[calc(70%-30px)] top-[calc(60%-30px)] md:left-[calc(65%-30px)] md:top-[calc(50%-30px)] z-20"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
           >
-            <div className="inline-flex items-center justify-center space-x-2 bg-[#DC241f]/10 text-[#DC241f] px-4 py-2 rounded-full mb-4">
-              <Heart className="h-4 w-4" />
-              <span className="font-semibold text-sm">Make a Difference</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{whyDonate.title}</h2>
-            <div className="space-y-6">
-              {whyDonate.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="text-3xl font-bold text-[#DC241f]">500K</div>
-                <p className="text-sm text-gray-600">Units of blood needed annually</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="text-3xl font-bold text-[#006600]">16%</div>
-                <p className="text-sm text-gray-600">Of blood need currently met</p>
+            <div className="relative">
+              <div className="absolute inset-0 bg-[#DC241f] rounded-full animate-ping opacity-30"></div>
+              <div className="relative bg-[#DC241f] p-4 rounded-full shadow-lg">
+                <Heart className="h-8 w-8 text-white" />
               </div>
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Call-to-Action Sticky Bar */}
+      <AnimatePresence>
+        {showStickyCta && (
+          <motion.div
+            className="fixed bottom-0 left-0 right-0 bg-[#DC241f] text-white py-3 z-50"
+            variants={stickyCTAVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <div className="container mx-auto px-4 flex items-center justify-between">
+              <p className="text-sm md:text-base font-medium">Ready to make a difference?</p>
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-white border-white hover:bg-white/20"
+                onClick={() => {
+                  const donationForm = document.getElementById("donation-form")
+                  if (donationForm) {
+                    donationForm.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
+              >
+                Donate Now
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
+

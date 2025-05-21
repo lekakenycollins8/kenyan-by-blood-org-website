@@ -72,7 +72,7 @@ export default function Header() {
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
           <Button
-            variant="primary"
+            variant="default"
             size="lg"
             className={cn(
               "rounded-full font-semibold",
@@ -122,7 +122,7 @@ export default function Header() {
                 Register
               </Button>
               <Button
-                variant="primary"
+                variant="default"
                 size="lg"
                 className="rounded-full bg-[#DC241f] hover:bg-[#b01c19] text-white"
                 onClick={() => setIsMenuOpen(false)}

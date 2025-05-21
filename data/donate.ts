@@ -8,12 +8,16 @@ export const donatePageData = {
     },
 
     whyDonate: {
-        title: "Why Donate?",
-        paragraphs: [
-      "In Kenya, thousands of lives are lost every year due to a shortage of safe, timely blood and lack of medical resources. From accident victims to mothers in childbirth, the need is urgent and ongoing.",
-      "By donating to our foundation, you're helping ensure that life-saving blood and healthcare resources are always available when needed. You're also joining a youth-led, community-driven movement committed to national wellness and dignity.",
+    title: "Why Your Donation Matters",
+    paragraphs: [
+      "In Kenya, thousands of lives hang in the balance due to critical blood shortages. Every 10 minutes, seven people require life-saving blood transfusions, yet only 16% of the needed supply is collected.",
+      "Maternal health is particularly affected, with 40% of maternal deaths caused by obstetric hemorrhage that could be prevented with adequate blood supply. Your donation directly addresses this urgent need.",
+      "By donating today, you join a movement of compassionate Kenyans creating a healthcare system where no one dies waiting for blood that should be readily available.",
     ],
-    image: "/images/why-donate.jpg", // Optional supporting image
+    image:
+      "https://images.pexels.com/photos/6823661/pexels-photo-6823661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "A young Kenyan mother holding her child after receiving a life-saving blood transfusion",
+    quote: "Your donation isn't just blood—it's someone's tomorrow.",
   },
 
   howHelpCards: [
