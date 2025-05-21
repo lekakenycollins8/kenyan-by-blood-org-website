@@ -56,8 +56,8 @@ export default function AboutHero() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Kenyan by Blood: <span className="text-[#DC241f]">Empowering Lifesaving Change</span>
+          <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            Kenyan by Blood Foundation: <span className="text-[#DC241f]">Empowering Lifesaving Change</span>
           </h1>
 
           {/* Subtitle */}

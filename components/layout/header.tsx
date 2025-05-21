@@ -33,14 +33,18 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className={cn("rounded-full p-1.5", scrolled ? "bg-[#DC241f]" : "bg-white")}>
-            <Heart
-              size={28}
-              className={cn("fill-current", scrolled ? "text-white" : "text-[#DC241f]")}
-              strokeWidth={1.5}
+            <div className={cn("rounded-full w-10 h-10 overflow-hidden", scrolled ? "bg-[#DC241f]" : "bg-white")}>
+            <img 
+              src="/images/KBBF-logo.svg" 
+              alt="KBFF Logo"
+              className="w-full h-full object-cover"
+              width={80}
+              height={80}
             />
-          </div>
+            </div>
           <span className={cn("text-2xl font-bold", scrolled ? "text-black" : "text-white")}>
+            <span>I</span>
+            <span>am</span>
             <span className="text-[#DC241f]">K</span>enyan
             <span className="text-[#DC241f]">B</span>y
             <span className="text-[#006600]">B</span>lood

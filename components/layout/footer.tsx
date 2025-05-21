@@ -14,12 +14,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Heart 
-                size={32} 
-                className="fill-[#DC241f] text-[#DC241f]" 
-                strokeWidth={1.5} 
-              />
+              <div className="rounded-full w-10 h-10 overflow-hidden">
+                          <img 
+                            src="/images/KBBF-logo.svg" 
+                            alt="KBFF Logo"
+                            className="w-full h-full object-cover"
+                            width={80}
+                            height={80}
+                          />
+                          </div>
               <span className="text-2xl font-bold">
+                <span>I</span>
+                <span>am</span>
                 <span className="text-[#DC241f]">K</span>enyan
                 <span className="text-[#DC241f]">B</span>y
                 <span className="text-[#006600]">B</span>lood

@@ -11,8 +11,9 @@ import Footer from "@/components/layout/footer"
 import CallToAction from "@/components/about/call-to-action"
 
 export const metadata = {
-  title: "About Us | DonaKenya",
-  description: "Learn about DonaKenya's mission to champion access to safe blood across Kenya.",
+  title: "About Us | Kenyan By Blood",
+  keywords: ["Kenyan By Blood", "About Us", "Blood Donation", "Kenya"],
+  description: "Learn about Kenyan By Blood's mission to champion access to safe blood across Kenya.",
 }
 
 export default function AboutPage() {
@@ -24,7 +25,7 @@ export default function AboutPage() {
         <WhoWeAre />
         <MissionVision />
         <ProblemStats />
-        <GlobalComparison />
+        {/* <GlobalComparison /> */}
         {/* <SituationalAnalysis /> */}
         <JourneyTimeline />
         <ApproachPillars />
