@@ -4,10 +4,16 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { donatePageData } from "@/data/donate";
 import Image from "next/image";
 
-export default function Hero({ data = donatePageData.hero, scrollToForm }: { data?: typeof donatePageData.hero; scrollToForm: () => void; }) {
+type HeroData = {
+  headline: string;
+  subheading: string;
+  ctaLabel: string;
+  backgroundImage: string;
+}
+
+export default function Hero({ data, scrollToForm }: { data: HeroData; scrollToForm: () => void; }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 

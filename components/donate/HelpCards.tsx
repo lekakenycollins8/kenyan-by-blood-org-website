@@ -3,9 +3,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { donatePageData } from "@/data/donate";
 
-export default function HelpCards({ cards = donatePageData.howHelpCards }) {
+type HelpCard = {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export default function HelpCards({ cards }: { cards: HelpCard[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 

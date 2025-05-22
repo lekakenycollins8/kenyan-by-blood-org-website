@@ -2,12 +2,17 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { donatePageData } from "@/data/donate"
 import { Quote } from "lucide-react"
 import Image from "next/image"
 
-export default function Testimonials() {
-  const { testimonials } = donatePageData
+type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
+}
+
+export default function Testimonials({ testimonials }: { testimonials: Testimonial[] }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 

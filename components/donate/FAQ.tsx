@@ -2,11 +2,14 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { donatePageData } from "@/data/donate"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-export default function FAQ() {
-  const { faqs } = donatePageData
+type FAQ = {
+  question: string;
+  answer: string;
+}
+
+export default function FAQ({ faqs }: { faqs: FAQ[] }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 

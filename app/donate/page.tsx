@@ -15,7 +15,7 @@ import FAQ from "@/components/donate/FAQ"
 import FinalCTA from "@/components/donate/FinalCTA"
 
 export default function DonatePage() {
-  const formRef = useRef(null)
+  const formRef = useRef<HTMLDivElement>(null)
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" })

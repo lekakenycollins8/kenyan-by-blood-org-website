@@ -2,13 +2,25 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { donatePageData } from "@/data/donate"
 import { Heart, Wallet, Handshake, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export default function DonationMethods() {
-  const { donationMethods } = donatePageData
+type DonationMethod = {
+  icon: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+  href: string;
+}
+
+export default function DonationMethods({ 
+  methods, 
+  scrollToForm 
+}: { 
+  methods: DonationMethod[];
+  scrollToForm: () => void;
+}) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
@@ -50,7 +62,7 @@ export default function DonationMethods() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {donationMethods.map((method, index) => (
+          {methods.map((method, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}

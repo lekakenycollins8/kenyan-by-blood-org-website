@@ -1,27 +1,29 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { donatePageData } from "@/data/donate"
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
 import Image from "next/image"
 
-export default function FinalCTA() {
-  const { finalCta } = donatePageData
+type FinalCTAData = {
+  headline: string;
+  ctaLabel: string;
+  backgroundImage: string;
+}
 
-  const scrollToForm = () => {
-    const formElement = document.getElementById("donation-form")
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
+export default function FinalCTA({ 
+  data, 
+  scrollToForm 
+}: { 
+  data: FinalCTAData;
+  scrollToForm: () => void;
+}) {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={finalCta.backgroundImage || "/placeholder.svg"}
+          src={data.backgroundImage || "/placeholder.svg"}
           alt="Blood donation impact"
           fill
           className="object-cover"
@@ -41,12 +43,12 @@ export default function FinalCTA() {
             <Heart className="h-4 w-4" />
             <span className="font-semibold text-sm">Make a Difference Today</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">{finalCta.headline}</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">{data.headline}</h2>
           <Button
             onClick={scrollToForm}
             className="bg-[#DC241f] hover:bg-[#b01c19] text-white px-8 py-6 rounded-full text-lg font-medium shadow-lg border-2 border-white"
           >
-            {finalCta.ctaLabel}
+            {data.ctaLabel}
           </Button>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
