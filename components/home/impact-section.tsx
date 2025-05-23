@@ -188,7 +188,7 @@ export default function ImpactSection() {
         {/* CTA Button */}
         <div className="text-center">
           <Button
-            variant="primary"
+            variant="default"
             size="lg"
             className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full group"
             asChild

@@ -61,7 +61,7 @@ export default function BloodDonationImpact() {
     }
   }, [activeTab, isInView])
   
-  const animateCounter = (startValue, endValue, duration, setterFunction) => {
+  const animateCounter = (startValue: number, endValue: number, duration: number, setterFunction: React.Dispatch<React.SetStateAction<number>>) => {
     const interval = 20 // ms
     const steps = duration / interval
     const increment = Math.ceil((endValue - startValue) / steps)
@@ -76,7 +76,7 @@ export default function BloodDonationImpact() {
     return () => clearInterval(timer)
   }
 
-  const getIcon = (iconName) => {
+  const getIcon = (iconName: string) => {
     const iconProps = "h-8 w-8"
     const iconColor = "text-red-600" // Kenya's red
     
@@ -108,7 +108,7 @@ export default function BloodDonationImpact() {
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -256,7 +256,7 @@ export default function BloodDonationImpact() {
                     <p className="text-lg md:text-xl italic text-gray-700 mb-6">{problemStatsData.quote.text}</p>
                     <div>
                       <p className="text-sm font-bold text-gray-900">{problemStatsData.quote.source}</p>
-                      <p className="text-sm text-gray-600">{problemStatsData.quote.position || "Blood Donor"}</p>
+                      <p className="text-sm text-gray-600">{"Blood Donor"}</p>
                     </div>
                   </div>
                 </div>

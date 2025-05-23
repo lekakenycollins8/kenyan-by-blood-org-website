@@ -124,17 +124,17 @@ export default function ProcessSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              variant="primary"
-              size="xl"
-              className="rounded-full group"
+              variant="default"
+              size="lg"
+              className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full group"
             >
               Start Donating Today
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button
-              variant="outline_success"
-              size="xl"
-              className="rounded-full"
+              variant="outline"
+              size="lg"
+              className="border-[#006600] text-[#006600] hover:bg-[#006600]/10 rounded-full"
             >
               Learn More
             </Button>

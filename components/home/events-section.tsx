@@ -69,9 +69,9 @@ export default function EventsSection() {
                 </div>
                 <div className="flex justify-between items-center">
                   <Button
-                    variant="outline_primary"
+                    variant="outline"
                     size="sm"
-                    className="rounded-full"
+                    className="rounded-full text-[#DC241f] border-[#DC241f] hover:bg-[#DC241f]/10"
                   >
                     Register
                   </Button>
@@ -91,9 +91,9 @@ export default function EventsSection() {
         {/* View All Button */}
         <div className="text-center">
           <Button
-            variant="outline_primary"
+            variant="outline"
             size="lg"
-            className="rounded-full"
+            className="rounded-full text-[#DC241f] border-[#DC241f] hover:bg-[#DC241f]/10"
           >
             View All Events
             <ArrowRight className="ml-2 h-4 w-4" />

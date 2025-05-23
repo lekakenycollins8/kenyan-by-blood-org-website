@@ -18,14 +18,30 @@ export default function ApproachPillars() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [openModal, setOpenModal] = useState(false)
-  const [selectedPillar, setSelectedPillar] = useState(null)
+  const [selectedPillar, setSelectedPillar] = useState<Pillar | null>(null)
 
-  const handleOpenModal = (pillar) => {
+  type IconName = "book-open" | "megaphone" | "users" | "handshake";
+
+  interface Pillar {
+    id: number;
+    title: string;
+    description: string;
+    icon: IconName;
+    keyPoints?: string[];
+  }
+
+  const handleOpenModal = (pillar: Pillar): void => {
     setSelectedPillar(pillar)
     setOpenModal(true)
   }
 
-  const getIcon = (iconName) => {
+  interface IconProps {
+    className: string;
+  }
+
+
+
+  const getIcon = (iconName: IconName): JSX.Element => {
     switch (iconName) {
       case "book-open":
         return <BookOpen className="h-8 w-8 text-white" />
@@ -40,7 +56,12 @@ export default function ApproachPillars() {
     }
   }
 
-  const getColor = (id) => {
+  interface ColorGradient {
+    from: string;
+    to: string;
+  }
+
+  const getColor = (id: number): string => {
     switch (id) {
       case 1:
         return "from-[#DC241f] to-[#b01c19]"
@@ -76,7 +97,7 @@ export default function ApproachPillars() {
               <div className={`bg-gradient-to-r ${getColor(pillar.id)} p-4`}>
                 <div className="flex items-center">
                   <div className="bg-white/20 w-10 h-10 flex items-center justify-center rounded-full mr-3">
-                    {getIcon(pillar.icon)}
+                    {getIcon(pillar.icon as IconName)}
                   </div>
                   <h3 className="text-lg font-bold text-white">
                     {pillar.id}. {pillar.title}
@@ -90,7 +111,7 @@ export default function ApproachPillars() {
                 <Button 
                   variant="outline" 
                   className="w-full text-sm"
-                  onClick={() => handleOpenModal(pillar)}
+                  onClick={() => handleOpenModal(pillar as Pillar)}
                 >
                   Read More
                 </Button>
@@ -120,7 +141,7 @@ export default function ApproachPillars() {
             <DialogHeader>
               <div className={`bg-gradient-to-r ${getColor(selectedPillar.id)} p-4 -mt-6 -mx-6 rounded-t-lg mb-4 flex items-center`}>
                 <div className="bg-white/20 w-10 h-10 flex items-center justify-center rounded-full mr-3">
-                  {getIcon(selectedPillar.icon)}
+                  {getIcon(selectedPillar.icon as IconName)}
                 </div>
                 <DialogTitle className="text-xl font-bold text-white">
                   {selectedPillar.id}. {selectedPillar.title}

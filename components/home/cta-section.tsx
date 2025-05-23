@@ -37,16 +37,16 @@ export default function CTASection() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
               <Button
-                variant="primary"
-                size="xl"
+                variant="default"
+                size="lg"
                 className="bg-white text-[#DC241f] hover:bg-gray-100 rounded-full shadow-lg group"
               >
                 Donate Blood Now
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
               <Button
-                variant="outline_primary"
-                size="xl"
+                variant="outline"
+                size="lg"
                 className="border-white text-white hover:bg-white/20 rounded-full shadow-lg"
               >
                 Register as Volunteer
