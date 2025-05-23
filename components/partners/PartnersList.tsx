@@ -20,19 +20,76 @@ export default function PartnersList({ partners }: PartnersListProps) {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  // Mock partners data with Unsplash logos for demonstration
+  // partners data 
   const mockPartners = [
-    { name: "Ministry of Health Kenya", logo: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=200&h=100&fit=crop", category: "Government" },
-    { name: "Kenyatta National Hospital", logo: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=100&fit=crop", category: "Healthcare" },
-    { name: "Safaricom Foundation", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop", category: "Corporate" },
-    { name: "Kenya Red Cross Society", logo: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200&h=100&fit=crop", category: "NGO" },
-    { name: "Aga Khan University Hospital", logo: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=200&h=100&fit=crop", category: "Healthcare" },
-    { name: "Equity Bank Foundation", logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=100&fit=crop", category: "Corporate" },
-    { name: "Mater Hospital", logo: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=100&fit=crop", category: "Healthcare" },
-    { name: "Standard Chartered Bank", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop", category: "Corporate" }
-  ]
+  {
+    name: "Blood Bank Association of Kenya",
+    logo: "/images/partners-logo/BBAK-logo.png",
+    category: "Healthcare"
+  },
+  {
+    name: "Blood Health Care Network",
+    logo: "/images/partners-logo/BHCN-logo.png",
+    category: "Healthcare"
+  },
+  {
+    name: "Counties Ministry",
+    logo: "/images/partners-logo/CM-logo.png",
+    category: "Government"
+  },
+  {
+    name: "Equity Trust",
+    logo: "/images/partners-logo/ET-logo.jpeg",
+    category: "Financial"
+  },
+  {
+    name: "ICON Group",
+    logo: "/images/partners-logo/ICON-logo.png",
+    category: "Corporate"
+  },
+  {
+    name: "Kenya National Blood Transfusion Service",
+    logo: "/images/partners-logo/KNBTS.jpeg",
+    category: "Government"
+  },
+  {
+    name: "Life Line Network Corporation",
+    logo: "/images/partners-logo/LLNC-logo.png",
+    category: "Healthcare"
+  },
+  {
+    name: "Mount Kenya University",
+    logo: "/images/partners-logo/MKU-logo.jpg",
+    category: "Education"
+  },
+  {
+    name: "Medical Medics",
+    logo: "/images/partners-logo/MM-logo.png",
+    category: "Healthcare"
+  },
+  {
+    name: "Ministry of Health",
+    logo: "/images/partners-logo/MOH-logo.png",
+    category: "Government"
+  },
+  {
+    name: "Red Alliance Group",
+    logo: "/images/partners-logo/RAG-logo.jpeg",
+    category: "NGO"
+  },
+  {
+    name: "Sustainable Development Youth Alliance",
+    logo: "/images/partners-logo/SDYA-logo.png",
+    category: "NGO"
+  },
+  {
+    name: "Technical University of Kenya",
+    logo: "/images/partners-logo/TUK-logo.jpg",
+    category: "Education"
+  }
+];
 
-  const displayPartners = partners.length > 0 ? partners : mockPartners
+  const displayPartners = partners.length > 0 ? partners : partners
 
   // Create infinite loop by duplicating partners
   const infinitePartners = [...displayPartners, ...displayPartners, ...displayPartners]
@@ -165,7 +222,7 @@ export default function PartnersList({ partners }: PartnersListProps) {
               }}
               style={{ width: `${infinitePartners.length * 280}px` }}
             >
-              {infinitePartners.map((partner, index) => (
+              {mockPartners.map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
                   className="flex-shrink-0 w-64 h-32 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200 group overflow-hidden"
@@ -208,13 +265,13 @@ export default function PartnersList({ partners }: PartnersListProps) {
               {/* Header */}
               <motion.div variants={itemVariants} className="text-center mb-12">
                 <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-100 border border-blue-300 rounded-full mb-6">
-                  <Shield className="w-5 h-5 text-blue-700" />
-                  <span className="text-blue-800 font-semibold text-sm uppercase tracking-wide">
+                  <Shield className="w-5 h-5 text-green-700" />
+                  <span className="text-green-800 font-semibold text-sm uppercase tracking-wide">
                     Official Partnership
                   </span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  <span className="text-blue-700">Ministry of Health</span> Partnership
+                  <span className="text-green-700">Ministry of Health</span> Partnership
                 </h3>
                 <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
                   The Ministry of Health through Kenya Blood Transfusion and Transplant Service wishes to partner with 
@@ -227,13 +284,13 @@ export default function PartnersList({ partners }: PartnersListProps) {
               <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-6 mb-12">
                 <div className="bg-white/80 backdrop-blur rounded-2xl p-6 border border-blue-200 shadow-lg">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Award className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                      <Award className="w-6 h-6 text-red-600" />
                     </div>
                     <h4 className="text-xl font-bold text-gray-900">Official Recognition</h4>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
-                    The Kenyan By Blood Foundation is <strong className="text-blue-700">HEREBY RECOGNIZED</strong> as 
+                    The Kenyan By Blood Foundation is <strong className="text-red-700">HEREBY RECOGNIZED</strong> as 
                     a partner to the Ministry of Health in effecting KBTTS mandate.
                   </p>
                 </div>
