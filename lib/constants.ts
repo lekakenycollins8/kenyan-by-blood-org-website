@@ -12,7 +12,6 @@ export const NAV_LINKS = [
   { name: "About Us", path: "/about" },
   { name: "Donate", path: "/donate" },
   { name: "Partner With Us", path: "/partners" },
-  { name: "Events", path: "/events" },
   { name: "Contact", path: "/contact" },
 ];
 
