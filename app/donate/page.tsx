@@ -44,7 +44,7 @@ export default function DonatePage() {
         />
 
         {/* Donation Form Section */}
-        <DonationForm 
+        <DonationForm  
         />
 
         {/* Testimonials Section */}
