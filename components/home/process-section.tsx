@@ -57,7 +57,7 @@ export default function ProcessSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How Blood Donation Works</h2>
           <p className="text-gray-600 text-lg">
             Donating blood is a simple and safe process that takes just about an hour of your time.
-            Here's what to expect when you donate with DonaKenya.
+            Here's what to expect when you donate with Kenyan By Blood Foundation.
           </p>
         </div>
         
