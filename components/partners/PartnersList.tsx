@@ -214,7 +214,7 @@ export default function PartnersList({ partners }: PartnersListProps) {
             <motion.div
               className="flex gap-8 items-center"
               animate={{
-                x: -currentIndex * (window.innerWidth < 640 ? 200 : 280),
+                x: -currentIndex * (typeof window !== 'undefined' ? (window.innerWidth < 640 ? 200 : 280) : 280),
               }}
               transition={{
                 duration: 0.8,
