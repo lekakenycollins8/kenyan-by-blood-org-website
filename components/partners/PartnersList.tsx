@@ -205,7 +205,7 @@ export default function PartnersList({ partners }: PartnersListProps) {
 
         {/* Infinite Logo Carousel */}
         <motion.div
-          className="mb-20"
+          className="mb-20 sm:mb-24"
           variants={itemVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -214,7 +214,7 @@ export default function PartnersList({ partners }: PartnersListProps) {
             <motion.div
               className="flex gap-8 items-center"
               animate={{
-                x: -currentIndex * 280 // Adjust based on logo width + gap
+                x: -currentIndex * (window.innerWidth < 640 ? 200 : 280),
               }}
               transition={{
                 duration: 0.8,
