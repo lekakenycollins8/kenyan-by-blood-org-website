@@ -76,25 +76,13 @@ export default function Footer() {
             </form>
           </div>
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-              <div>
-                <h4 className="font-semibold text-lg mb-3 text-[#DC241f]">Contact Us</h4>
-                <address className="text-gray-300 not-italic">
-                  <p>123 Kimathi Street</p>
-                  <p>Nairobi, Kenya</p>
-                  <p className="mt-2">+254 123 456 789</p>
-                  <p>info@kenyanbyblood.org</p>
-                </address>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg mb-3 text-[#DC241f]">Opening Hours</h4>
-                <ul className="text-gray-300">
-                  <li>Mon - Fri: 8am - 6pm</li>
-                  <li>Saturday: 9am - 4pm</li>
-                  <li>Sunday: 10am - 2pm</li>
-                </ul>
-              </div>
-            </div>
+            <h4 className="font-semibold text-lg mb-3 text-[#DC241f]">Contact Us</h4>
+            <address className="text-gray-300 not-italic">
+              <p>Riara Center, Riara Road</p>
+              <p>Nairobi, Kenya</p>
+              <p className="mt-2">+254 123 456 789</p>
+              <p>info@kenyanbyblood.org</p>
+            </address>
           </div>
         </div>
         
