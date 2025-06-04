@@ -17,7 +17,7 @@ export default function HeroSection() {
 
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/70 via-transparent to-[#006600]/30 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#006600]/70 via-white/30 to-[#DC241f]/70 z-10"></div>
           <div className="relative w-full h-full">
             <Image
               src="https://images.pexels.com/photos/6823539/pexels-photo-6823539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

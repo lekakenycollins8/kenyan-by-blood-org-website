@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react"
 export default function RecipientCard() {
   return (
     <motion.div
-      className="relative rounded-xl overflow-hidden shadow-xl max-h-[550px] md:max-h-[600px] lg:max-h-[800px] lg:h-auto lg:max-h-none"
+      className="relative rounded-xl overflow-hidden shadow-xl max-h-[550px] md:max-h-[600px] lg:max-h-[800px] lg:h-auto"
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.3, duration: 0.6 }}

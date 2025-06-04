@@ -118,29 +118,6 @@ const getColorClasses = (index: number): ColorClasses => {
     </div>
   );
 };
-
-// Stats Card Component
-const StatsCard = () => {
-  return (
-    <div className="bg-gradient-to-br from-green-600 via-black to-red-600 p-6 rounded-2xl text-white border-4 border-white shadow-xl">
-      <div className="flex items-center gap-2 mb-4">
-        <Shield className="w-6 h-6 text-yellow-300" />
-        <h3 className="font-bold text-lg">Our Impact</h3>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="text-center bg-white/10 rounded-lg p-3">
-          <div className="text-2xl font-bold text-green-300">10K+</div>
-          <div className="text-white/80 text-sm">Lives Saved</div>
-        </div>
-        <div className="text-center bg-white/10 rounded-lg p-3">
-          <div className="text-2xl font-bold text-red-300">50+</div>
-          <div className="text-white/80 text-sm">Partners</div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Contact Type Selection Component
 interface ContactTypeSelectorProps {
   selectedType: string;
@@ -265,25 +242,126 @@ const SuccessMessage = () => {
   );
 };
 
-// Map Section Component
 const MapSection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-green-50 via-white to-red-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Find Us</h2>
-          <p className="text-xl text-gray-600">Visit our main office and donation center in Nairobi</p>
+          <p className="text-xl text-gray-600 mb-8">Visit our main office and donation center in Nairobi</p>
+          
+          {/* Location Summary Cards */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600">
+              <div className="flex items-center mb-3">
+                <div className="w-3 h-3 bg-green-600 rounded-full mr-3"></div>
+                <h3 className="text-lg font-bold text-green-800">MAIN OFFICE</h3>
+              </div>
+              <p className="text-gray-700 font-semibold">Riara Center, Office B7</p>
+              <p className="text-gray-600">Riara Road, Nairobi</p>
+              <p className="text-sm text-gray-500 mt-2">Administrative headquarters</p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-600">
+              <div className="flex items-center mb-3">
+                <div className="w-3 h-3 bg-red-600 rounded-full mr-3"></div>
+                <h3 className="text-lg font-bold text-red-800">MAIN DONATION CENTER</h3>
+              </div>
+              <p className="text-gray-700 font-semibold">Kenya National Blood Transfusion Services</p>
+              <p className="text-gray-600">Next to Kenyatta National Hospital</p>
+              <p className="text-sm text-gray-500 mt-2">Primary blood donation facility</p>
+            </div>
+          </div>
         </div>
         
-        <div className="bg-white rounded-2xl overflow-hidden shadow-xl border-4 border-green-500">
-          <div className="h-96 bg-gradient-to-br from-green-100 via-white to-red-100 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Interactive Map</h3>
-              <p className="text-gray-600 mb-4">123 Uhuru Highway, Nairobi, Kenya 00100</p>
-              <button className="bg-gradient-to-r from-green-600 to-black text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105">
-                Get Directions
-              </button>
+        {/* Interactive Maps */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Main Office Map */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
+              <div className="flex items-center">
+                <div className="w-4 h-4 bg-white rounded-full mr-3"></div>
+                <div>
+                  <h3 className="text-lg font-bold">Main Office</h3>
+                  <p className="text-green-100 text-sm">Riara Center, Office B7 - Riara Road</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7952464774453!2d36.75703047350064!3d-1.2975492356354632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6b77b230bf%3A0x362d342aa8a77c3!2sRiara%20Center!5e0!3m2!1sen!2ske!4v1749047991040!5m2!1sen!2ske" 
+                referrerPolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                title="Riara Center Main Office Location"
+              ></iframe>
+              <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                📍 Main Office
+              </div>
+            </div>
+            <div className="p-4 bg-gray-50">
+              <div className="flex items-center text-sm text-gray-600">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                Administrative services and inquiries
+              </div>
+            </div>
+          </div>
+
+          {/* Main Donation Center Map */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-4">
+              <div className="flex items-center">
+                <div className="w-4 h-4 bg-white rounded-full mr-3"></div>
+                <div>
+                  <h3 className="text-lg font-bold">Main Donation Center</h3>
+                  <p className="text-red-100 text-sm">Kenya National Blood Transfusion Services</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7915959379047!2d36.8091013735008!3d-1.2998622356380434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11efb4e7c7e1%3A0xe9614cbc83d02b91!2sKenya%20National%20Blood%20Transfusion%20Services%20(Nbts)!5e0!3m2!1sen!2ske!4v1749048461278!5m2!1sen!2ske" 
+                width="100%" 
+                height="350" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kenya National Blood Transfusion Services Location"
+              ></iframe>
+              <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                🩸 Donation Center
+              </div>
+            </div>
+            <div className="p-4 bg-gray-50">
+              <div className="flex items-center text-sm text-gray-600">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                </svg>
+                Primary blood donation facility
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-12 text-center">
+          <div className="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Need Directions?</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h4 className="font-semibold text-green-800 mb-2">📞 Main Office</h4>
+                <p className="text-gray-600 text-sm">For administrative inquiries</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-red-800 mb-2">🩸 Donation Center</h4>
+                <p className="text-gray-600 text-sm">For blood donation appointments</p>
+              </div>
             </div>
           </div>
         </div>
@@ -291,6 +369,7 @@ const MapSection = () => {
     </section>
   );
 };
+
 
 // Main Contact Form Component
 const ContactForm = () => {
@@ -477,14 +556,6 @@ export default function ContactPage() {
       index: 1
     },
     {
-      icon: MapPin,
-      title: "Address",
-      primary: "123 Uhuru Highway",
-      secondary: "Nairobi, Kenya 00100",
-      description: "Visit our main office and donation center",
-      index: 2
-    },
-    {
       icon: Clock,
       title: "Hours",
       primary: "Mon - Fri: 8:00 AM - 6:00 PM",
@@ -520,8 +591,6 @@ export default function ContactPage() {
                     <ContactInfoCard key={index} info={info} />
                     ))}
                 </div>
-
-                <StatsCard />
                 </div>
 
                 {/* Contact Form */}

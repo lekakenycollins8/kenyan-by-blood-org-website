@@ -43,7 +43,7 @@ export default function Header() {
             />
             </div>
           <span className={cn("text-2xl font-bold", scrolled ? "text-black" : "text-white")}>
-            <span>I</span>
+            <span>i</span>
             <span>am</span>
             <span className="text-[#DC241f]">K</span>enyan
             <span className="text-[#DC241f]">B</span>y

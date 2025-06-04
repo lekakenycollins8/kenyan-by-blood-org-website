@@ -24,7 +24,7 @@ export default function Footer() {
                           />
                           </div>
               <span className="text-2xl font-bold">
-                <span>I</span>
+                <span>i</span>
                 <span>am</span>
                 <span className="text-[#DC241f]">K</span>enyan
                 <span className="text-[#DC241f]">B</span>y
