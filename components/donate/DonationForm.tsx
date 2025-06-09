@@ -88,15 +88,6 @@ export default function DonationForm() {
                           <h4 className="font-bold mb-2">Instructions:</h4>
                           <p className="whitespace-pre-line">{method.instructions}</p>
                         </div>
-                      ) : method.link ? (
-                        <div>
-                          <h4 className="font-bold mb-2">Pay via {method.name}:</h4>
-                          <Button asChild className="bg-[#DC241f] hover:bg-[#b01c19] text-white">
-                            <a href={method.link} target="_blank" rel="noopener noreferrer">
-                              Proceed to {method.name}
-                            </a>
-                          </Button>
-                        </div>
                       ) : null}
                     </div>
                   </TabsContent>
