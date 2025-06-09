@@ -8,8 +8,8 @@ const redHat = Red_Hat_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Kenyan By Blood',
-  description: 'Kenyan By Blood Organization Website',
+  title: 'Kenyan By Blood Foundation',
+  description: 'Kenyan By Blood Foundation Website',
 };
 
 export default function RootLayout({

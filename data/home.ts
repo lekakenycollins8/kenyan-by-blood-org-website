@@ -30,6 +30,7 @@ export const DONATION_PROCESS = [
     description:
       "Complete a simple registration form with your personal information.",
     icon: "clipboard-list",
+    image: '/images/registration.jpg',
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ export const DONATION_PROCESS = [
     description:
       "Brief medical check to ensure you're eligible to donate blood safely.",
     icon: "stethoscope",
+    image: '/images/screening.jpg',
   },
   {
     id: 3,
@@ -44,6 +46,7 @@ export const DONATION_PROCESS = [
     description:
       "The actual blood donation takes just 8-10 minutes in a safe environment.",
     icon: "heart",
+    image: '/images/donation.jpg',
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ export const DONATION_PROCESS = [
     description:
       "Enjoy refreshments and rest for 15 minutes before resuming your day.",
     icon: "coffee",
+    image: '/images/recovery.jpg',
   },
 ];
 

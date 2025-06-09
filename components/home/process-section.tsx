@@ -99,7 +99,7 @@ export default function ProcessSection() {
                 <div className="md:w-1/2 relative">
                   <div className="bg-gradient-to-br from-white to-gray-100 rounded-xl p-4 shadow-md transform hover:scale-105 transition-transform duration-300">
                     <img 
-                      src={`https://images.pexels.com/photos/${3952238 + index}/pexels-photo-${3952238 + index}.jpeg?auto=compress&cs=tinysrgb&w=600`}
+                      src={step.image}
                       alt={step.title}
                       className="w-full h-64 object-cover rounded-lg shadow-inner"
                     />
