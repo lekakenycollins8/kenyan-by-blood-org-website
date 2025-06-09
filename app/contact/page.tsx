@@ -65,7 +65,7 @@ const EmergencyBanner = () => {
             href="tel:+254700123456" 
             className="bg-white text-red-600 px-4 py-2 rounded-full font-bold hover:bg-green-50 transition-colors border-2 border-green-400"
           >
-            Call Now: +254 700 123 456
+            Call Now: +254 720 572 793
           </a>
         </div>
       </div>
@@ -542,16 +542,16 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Phone",
-      primary: "+254 700 123 456",
-      secondary: "+254 722 987 654",
+      primary: "+254 720 572 793",
+      secondary: "+254 759 299 270",
       description: "Call us anytime for urgent blood donation needs",
       index: 0
     },
     {
       icon: Mail,
       title: "Email",
-      primary: "info@kenyanbyblood.org",
-      secondary: "emergency@kenyanbyblood.org",
+      primary: "derrick@iamkenyanbyblood.org",
+      secondary: "lamech@iamkenyanbyblood.org",
       description: "Send us your questions or partnership inquiries",
       index: 1
     },

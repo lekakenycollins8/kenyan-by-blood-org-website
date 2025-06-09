@@ -16,14 +16,14 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
     {
       icon: Phone,
       label: "Call Us",
-      value: "+254 700 123 456",
-      action: "tel:+254700123456"
+      value: "+254 720 572 793",
+      action: "tel:+254720572793"
     },
     {
       icon: Mail,
       label: "Email Us",
-      value: "partners@kenyanbyblood.org",
-      action: "mailto:partners@kenyanbyblood.org"
+      value: "derrick@iamkenyanbyblood.org",
+      action: "mailto:derrick@iamkenyanbyblood.org"
     },
     {
       icon: MapPin,
@@ -154,7 +154,7 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
             {/* Schedule meeting */}
             <div className="border-t border-white/20 pt-4 sm:pt-6">
               <a
-                href="/schedule-meeting"
+                href="/contact"
                 className="group w-full flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 bg-gradient-to-r from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 border border-white/30 text-white font-medium rounded-lg sm:rounded-xl transition-all duration-300 text-sm sm:text-base"
               >
                 <Calendar className="w-4 sm:w-5 h-4 sm:h-5" />
@@ -168,10 +168,10 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
         {/* Bottom stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 lg:mt-20 pt-8 sm:pt-12 border-t border-white/20">
           {[
-            { label: "Active Partners", value: "50+" },
-            { label: "Lives Saved", value: "10K+" },
-            { label: "Counties Covered", value: "15" },
-            { label: "Years of Impact", value: "8+" }
+            { label: "Active Partners", value: "30+" },
+            { label: "Lives Saved", value: "200K+" },
+            { label: "Counties Covered", value: "6+" },
+            { label: "Years of Impact", value: "3+" }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">

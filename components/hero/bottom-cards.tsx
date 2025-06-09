@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Heart, Calendar, Users, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function BottomCards() {
   return (
@@ -24,13 +25,15 @@ export default function BottomCards() {
                 <h3 className="font-bold text-gray-900 mb-1">Donate Blood</h3>
                 <p className="text-sm text-gray-600">Your donation helps save lives across Kenya.</p>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                className="rounded-full border-[#DC241f] text-[#DC241f] hover:bg-[#DC241f] hover:text-white"
-              >
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+                <Link href="/donate">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="rounded-full border-[#DC241f] text-[#DC241f] hover:bg-[#DC241f] hover:text-white"
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
             </div>
           </motion.div>
 
@@ -49,13 +52,15 @@ export default function BottomCards() {
                 <h3 className="font-bold text-gray-900 mb-1">Schedule Visit</h3>
                 <p className="text-sm text-gray-600">Book your donation appointment in advance.</p>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                className="rounded-full border-[#006600] text-[#006600] hover:bg-[#006600] hover:text-white"
-              >
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+                <Link href="/contact">
+                  <Button
+                  variant="outline"
+                  size="sm"
+                  className="rounded-full border-[#006600] text-[#006600] hover:bg-[#006600] hover:text-white"
+                  >
+                  <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
             </div>
           </motion.div>
 

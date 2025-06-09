@@ -20,7 +20,7 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
   const isInView = useInView(ref, { once: true, amount: 0.3 })
 
   // Blood donation themed image URL
-  const bloodDonationImage = "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+  const bloodDonationImage = "/images/kenya-blood-donation-unity.jpg"
 
   // Animation variants for staggered reveals
   const containerVariants = {
@@ -55,7 +55,7 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-red-50 via-white to-red-50"
+      className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-red-30 via-white to-red-30"
       aria-label="Partners Hero Section"
     >
       {/* Diagonal clipped image panel with blood donation theme */}
@@ -142,9 +142,9 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 mb-12"
           >
             {[
-              { icon: Users, value: "50+", label: "Active Partners", color: "blue" },
-              { icon: Globe, value: "15", label: "Counties Reached", color: "green" },
-              { icon: Heart, value: "10K+", label: "Lives Saved", color: "red" }
+              { icon: Users, value: "30+", label: "Active Partners", color: "blue" },
+              { icon: Globe, value: "6+", label: "Counties Reached", color: "green" },
+              { icon: Heart, value: "200K+", label: "Lives Saved", color: "red" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
