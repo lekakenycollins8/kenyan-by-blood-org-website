@@ -137,9 +137,9 @@ export default function ApproachPillars() {
       {/* Modal Dialog for Pillar Details */}
       <Dialog open={openModal} onOpenChange={setOpenModal}>
         {selectedPillar && (
-          <DialogContent className="sm:max-w-md md:max-w-lg">
+          <DialogContent className="w-[95vw] p-4 sm:p-6 sm:max-w-md md:max-w-lg">
             <DialogHeader>
-              <div className={`bg-gradient-to-r ${getColor(selectedPillar.id)} p-4 -mt-6 -mx-6 rounded-t-lg mb-4 flex items-center`}>
+              <div className={`bg-gradient-to-r ${getColor(selectedPillar.id)} p-3 sm:p-4 -mt-4 sm:-mt-6 -mx-4 sm:-mx-6 rounded-t-lg mb-4 flex items-center flex-wrap sm:flex-nowrap`}>
                 <div className="bg-white/20 w-10 h-10 flex items-center justify-center rounded-full mr-3">
                   {getIcon(selectedPillar.icon as IconName)}
                 </div>
