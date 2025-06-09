@@ -4,7 +4,7 @@ export const donatePageData = {
         subheading:
             "Every drop counts. Your donation supports emergency care, maternal health, and countless lives across Kenya.",
         ctaLabel: "Donate Now",
-        backgroundImage: "https://images.unsplash.com/photo-1615461066841-6116e61058f4", // Blood donation image
+        backgroundImage: "/images/donate-hero.jpg", // Blood donation image
     },
 
     whyDonate: {
@@ -15,8 +15,8 @@ export const donatePageData = {
       "By donating today, you join a movement of compassionate Kenyans creating a healthcare system where no one dies waiting for blood that should be readily available.",
     ],
     image:
-      "https://images.pexels.com/photos/6823661/pexels-photo-6823661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "A young Kenyan mother holding her child after receiving a life-saving blood transfusion",
+      "/images/donate-matters.jpg",
+    alt: "A young Kenyan man holding a placard after donating blood",
     quote: "Your donation isn't just blood—it's someone's tomorrow.",
   },
 
@@ -53,8 +53,8 @@ export const donatePageData = {
     },
     {
       icon: "wallet",
-      title: "Donate Money",
-      description: "Contribute via M-Pesa, PayPal, or bank transfer. Every amount counts.",
+      title: "Donate in Kind",
+      description: "Contribute money, medical supplies, equipment, or volunteer your time.",
       ctaLabel: "Give Now",
       href: "#donation-form",
     },
@@ -81,15 +81,11 @@ export const donatePageData = {
     methods: [
       {
         name: "M-Pesa",
-        instructions: "Paybill: 123456, Account: BLOODDONATION",
-      },
-      {
-        name: "PayPal",
-        link: "https://paypal.me/kenyanbyblood",
+        instructions: "Paybill: 522533\nAccount: 7987279",
       },
       {
         name: "Bank Transfer",
-        instructions: "Account Name: Kenyan by Blood Foundation\nAccount No: 010123456789\nBank: Kenya National Bank",
+        instructions: "Account Name: Kenyan by Blood Foundation\nAccount No: 1340858835\nBank: Cooperative Bank",
       },
     ],
     trustMessage: "100% of your donation supports life-saving programs and resources.",

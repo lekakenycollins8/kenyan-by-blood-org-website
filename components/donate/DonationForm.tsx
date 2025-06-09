@@ -78,7 +78,6 @@ export default function DonationForm() {
               <Tabs defaultValue={donationForm.methods[0].name.toLowerCase()}>
                 <TabsList className="grid w-full grid-cols-3">
                   <TabsTrigger value="m-pesa">M-Pesa</TabsTrigger>
-                  <TabsTrigger value="paypal">PayPal</TabsTrigger>
                   <TabsTrigger value="bank transfer">Bank Transfer</TabsTrigger>
                 </TabsList>
                 {donationForm.methods.map((method, index) => (
