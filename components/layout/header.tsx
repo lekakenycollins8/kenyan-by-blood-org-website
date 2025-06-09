@@ -71,18 +71,19 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
-          <Button
+            <Button
             variant="default"
             size="lg"
             className={cn(
               "rounded-full font-semibold",
               scrolled
-                ? "bg-[#DC241f] hover:bg-[#b01c19] text-white border-2 border-white"
-                : "bg-[#006600] hover:bg-[#004d00] text-white border-2 border-white",
+              ? "bg-[#DC241f] hover:bg-[#b01c19] text-white border-2 border-white"
+              : "bg-[#006600] hover:bg-[#004d00] text-white border-2 border-white",
             )}
-          >
+            onClick={() => window.location.href = '/donate'}
+            >
             Donate Now
-          </Button>
+            </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -113,22 +114,25 @@ export default function Header() {
               </Link>
             ))}
             <div className="grid grid-cols-2 gap-3 mt-4">
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="rounded-full border-[#006600] text-[#006600] hover:bg-[#006600] hover:text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Register
-              </Button>
-              <Button
+              </Button> */}
+                <Button
                 variant="default"
                 size="lg"
                 className="rounded-full bg-[#DC241f] hover:bg-[#b01c19] text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  window.location.href = '/donate'
+                }}
+                >
                 Donate Now
-              </Button>
+                </Button>
             </div>
           </nav>
         </div>
