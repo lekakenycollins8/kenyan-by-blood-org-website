@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { DONATION_PROCESS } from "@/data/home";
 import { ClipboardList, Stethoscope, Heart, Coffee, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function ProcessSection() {
   const ref = useRef(null);
@@ -98,11 +99,13 @@ export default function ProcessSection() {
                 {/* Image for desktop */}
                 <div className="md:w-1/2 relative">
                   <div className="bg-gradient-to-br from-white to-gray-100 rounded-xl p-4 shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <img 
-                      src={step.image}
-                      alt={step.title}
-                      className="w-full h-64 object-cover rounded-lg shadow-inner"
-                    />
+                  <Image 
+                    src={step.image}
+                    alt={step.title}
+                    width={500}
+                    height={256}
+                    className="w-full h-64 object-cover rounded-lg shadow-inner"
+                  />
                   </div>
                 </div>
               </motion.div>
@@ -127,16 +130,10 @@ export default function ProcessSection() {
               variant="default"
               size="lg"
               className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full group"
+              onClick={() => window.location.href = '/donate'}
             >
               Start Donating Today
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-[#006600] text-[#006600] hover:bg-[#006600]/10 rounded-full"
-            >
-              Learn More
             </Button>
           </div>
         </motion.div>

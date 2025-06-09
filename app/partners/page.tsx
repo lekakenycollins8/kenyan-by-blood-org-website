@@ -8,12 +8,6 @@ import PartnersList from "@/components/partners/PartnersList"
 import WhyPartner from "@/components/partners/WhyPartners"
 import PartnerCTA from "@/components/partners/PartnerCTA"
 
-export const metadata = {
-  title: "Partners | Kenyan By Blood Foundation",
-  keywords: ["Kenyan By Blood Foundation", "Partners", "Blood Donation", "Kenya"],
-  description: "Learn about Kenyan By Blood Foundation's partners and mission to champion access to safe blood across Kenya.",
-}
-
 import { partnersPageData } from "@/data/partners"
 export default function PartnersPage() {
   const ctaRef = useRef<HTMLDivElement>(null)
