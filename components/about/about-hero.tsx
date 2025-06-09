@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function AboutHero() {
@@ -18,7 +19,7 @@ export default function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/6823661/pexels-photo-6823661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="/images/about-page-image.jpg"
           alt="Kenyan blood donation"
           fill
           priority
@@ -75,12 +76,14 @@ export default function AboutHero() {
               <ArrowDown className="ml-2 h-5 w-5 group-hover:animate-bounce" />
             </Button>
 
-            <Button
+            <Link href="/donate">
+              <Button
               variant="outline"
-              className="border-white text-white hover:bg-white/20 px-8 py-6 rounded-full text-lg font-medium"
-            >
+              className="border-white text-black hover:bg-white/20 px-8 py-6 rounded-full text-lg font-medium"
+              >
               Donate Now
-            </Button>
+              </Button>
+            </Link>
           </div>
 
           {/* Blood Drop Animation */}

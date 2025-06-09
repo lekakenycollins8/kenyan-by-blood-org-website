@@ -48,7 +48,7 @@ export default function WhoWeAre() {
                 {/* Main Image */}
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src={whoWeAreData.image || "/placeholder.svg"}
+                    src={whoWeAreData.image}
                     alt="Kenya team"
                     fill
                     className="object-cover"

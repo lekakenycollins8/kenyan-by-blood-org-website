@@ -100,8 +100,9 @@ export default function CallToAction() {
               size="lg"
               className="bg-black/60 backdrop-blur-sm border-2 border-white text-white hover:bg-black/70 rounded-full shadow-lg font-semibold text-base px-8 py-6"
               asChild
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <Link href="/contact">Learn More</Link>
+              <Link href="#top">Learn More</Link>
             </Button>
           </div>
           
