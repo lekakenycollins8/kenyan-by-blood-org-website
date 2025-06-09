@@ -80,8 +80,8 @@ export default function Footer() {
             <address className="text-gray-300 not-italic">
               <p>Riara Center, Riara Road</p>
               <p>Nairobi, Kenya</p>
-              <p className="mt-2">+254 123 456 789</p>
-              <p>info@kenyanbyblood.org</p>
+              <p className="mt-2">+254 720 572 793</p>
+              <p>derrick@iamkenyanbyblood.org</p>
             </address>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} KenyanByBlood. All rights reserved. NGO Registration #12345
+            © {currentYear} KenyanByBlood. All rights reserved. 
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0 text-sm text-gray-400">
             <Link href="/privacy" className="hover:text-white">

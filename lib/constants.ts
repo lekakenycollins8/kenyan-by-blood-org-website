@@ -19,17 +19,17 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     name: "Facebook",
-    url: "https://facebook.com",
+    url: "https://www.facebook.com/share/1BJn28P8d2/",
     icon: "facebook",
   },
   {
     name: "Twitter",
-    url: "https://twitter.com",
+    url: "https://x.com/kenyan_by_blood?t=c702FVM5ICYPpTQhtupYzQ&s=09",
     icon: "twitter",
   },
   {
     name: "Instagram",
-    url: "https://instagram.com",
+    url: "https://www.instagram.com/kenyanbybloodfoundation/",
     icon: "instagram",
   },
   {
