@@ -98,7 +98,7 @@ export const donatePageData = {
       quote:
         "Without a timely transfusion, I might not be here today. I'm forever grateful to the donors and this foundation.",
       image:
-        "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "/images/testimonial1.JPG",
     },
     {
       name: "David M.",
@@ -106,7 +106,7 @@ export const donatePageData = {
       quote:
         "Donating blood is one of the simplest, most powerful things you can do. I'm proud to be part of this movement.",
       image:
-        "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "/images/testimonial2.jpg",
     },
   ],
 
