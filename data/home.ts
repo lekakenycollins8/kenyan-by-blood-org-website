@@ -66,7 +66,7 @@ export const TESTIMONIALS = [
       "After my son needed an emergency transfusion, I committed to donating blood regularly. This organization makes it so easy and convenient.",
     author: "Sarah Mwangi",
     location: "Nairobi",
-    image: "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: "/images/testimonial1.JPG",
   },
   {
     id: 2,
@@ -74,15 +74,15 @@ export const TESTIMONIALS = [
       "I've been donating for 5 years now, and I know my blood goes directly to saving lives in my community. It's the easiest way to be a hero.",
     author: "James Odhiambo",
     location: "Kisumu",
-    image: "https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: "/images/testimonial2.jpg",
   },
   {
     id: 3,
     quote:
       "The team is professional, friendly, and they make the whole process painless. I bring my university students every semester.",
-    author: "Dr. Elizabeth Mutai",
+    author: "Dr. Kenneth Koech",
     location: "Eldoret",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: "/images/testimonial3.jpg",
   },
 ];
 
