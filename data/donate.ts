@@ -85,7 +85,7 @@ export const donatePageData = {
       },
       {
         name: "Bank Transfer",
-        instructions: "Account Name: Kenyan by Blood Foundation\nAccount No: 1340858835\nBank: Cooperative Bank",
+        instructions: "Account Name: Kenyan by Blood Foundation\nAccount No: 1340858835\nBank: Kenya Commercial Bank (KCB)",
       },
     ],
     trustMessage: "100% of your donation supports life-saving programs and resources.",
