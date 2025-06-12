@@ -8,7 +8,7 @@ interface TeamCardProps {
 
 const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
   return (
-    <div className="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+    <div id="team" className="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
       {/* Image Container - Using object-contain to prevent cropping */}
       <div className="relative h-64 w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
         <Image

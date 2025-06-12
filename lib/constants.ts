@@ -46,35 +46,35 @@ export const FOOTER_LINKS = [
     links: [
       { name: "Our Story", path: "/about" },
       { name: "Team", path: "/about#team" },
-      { name: "Testimonials", path: "/about#testimonials" },
-      { name: "Careers", path: "/careers" },
+      { name: "Testimonials", path: "/#testimonials" },
+      { name: "Impact", path: "/#impact" },
     ],
   },
   {
     title: "Get Involved",
     links: [
       { name: "Donate Blood", path: "/donate" },
-      { name: "Volunteer", path: "/volunteer" },
-      { name: "Partner With Us", path: "/partner" },
-      { name: "Host A Drive", path: "/host" },
+      { name: "Volunteer", path: "/contact" },
+      { name: "Partner With Us", path: "/partners" },
+      { name: "Host A Drive", path: "/partners" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { name: "Blood Types", path: "/resources/blood-types" },
-      { name: "FAQs", path: "/faqs" },
-      { name: "Donation Process", path: "/process" },
-      { name: "Research", path: "/research" },
+      { name: "Blood Types", path: "#" },
+      { name: "FAQs", path: "/about#faqs" },
+      { name: "Donation Process", path: "#process" },
+      { name: "Research", path: "#" },
     ],
   },
   {
     title: "Support",
     links: [
       { name: "Contact Us", path: "/contact" },
-      { name: "Report Issues", path: "/contact#issues" },
-      { name: "Donation Centers", path: "/centers" },
-      { name: "Privacy Policy", path: "/privacy" },
+      { name: "Report Issues", path: "/contact" },
+      { name: "Donation Centers", path: "#" },
+      { name: "Privacy Policy", path: "#" },
     ],
   },
 ];
