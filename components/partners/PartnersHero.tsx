@@ -71,7 +71,7 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
             >
               <Image
                 src={bloodDonationImage}
-                alt="Blood donation - healthcare workers and donors"
+                alt="Blood donation partnership in Kenya - Kenyan By Blood Foundation healthcare workers and donors"
                 fill
                 className="object-cover"
                 priority
@@ -165,6 +165,7 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
             <button
               onClick={scrollToCTA}
               className="group relative inline-flex items-center justify-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-red-500/30 overflow-hidden"
+              aria-label="Partner with Kenyan By Blood Foundation for blood donation initiatives"
             >
               <span className="relative z-10 mr-2">{data.ctaLabel}</span>
               <ArrowDown className="w-5 h-5 transition-transform group-hover:translate-y-1" />
@@ -183,7 +184,7 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
         >
           <Image
             src={bloodDonationImage}
-            alt="Blood donation - healthcare workers and donors"
+            alt="Blood donation partnership in Kenya - Kenyan By Blood Foundation mobile view"
             fill
             className="object-cover"
           />

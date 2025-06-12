@@ -51,7 +51,7 @@ export default function ImpactSection() {
             <Heart className="h-4 w-4 fill-[#DC241f]" />
             <span className="font-semibold text-sm">Our Impact</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4">Our Impact in One Year</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4">Blood Donation Impact in Kenya | Kenyan By Blood Foundation</h2>
           <p className="text-gray-600 text-base sm:text-lg px-4">
             Since our inception in September 2023, we have made significant strides in raising awareness and increasing
             blood donations. Through organized blood drives across various counties, we have collected over 73,000
@@ -78,7 +78,7 @@ export default function ImpactSection() {
           className="text-center mb-12"
         >
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-            SNAPSHOT OF <span className="text-[#DC241f]">our ACHIEVEMENTS</span> in 2024
+            SNAPSHOT OF <span className="text-[#DC241f]">BLOOD DONATION ACHIEVEMENTS</span> in Kenya 2024
           </h3>
         </motion.div>
 
@@ -142,7 +142,7 @@ export default function ImpactSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Lives Impacted</h3>
+              <h3 className="text-2xl font-bold mb-4">Blood Donation Lives Impacted in Kenya</h3>
               <p className="text-gray-600 mb-6">
                 Through our collective efforts, we've collected over 73,000 pints of blood, potentially saving or
                 improving the lives of an estimated 200,000 individuals across Kenya.

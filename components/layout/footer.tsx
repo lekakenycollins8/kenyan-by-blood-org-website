@@ -32,8 +32,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-300 max-w-md">
-              KenyanByBlood is a leading blood donation NGO in Kenya, committed to ensuring 
-              a safe and sufficient blood supply throughout the country.
+              Kenyan By Blood Foundation is a leading blood donation NGO in Nairobi, Kenya, committed to ensuring 
+              a safe and sufficient blood supply throughout Kenya. We organize blood drives across the country to support healthcare facilities.
             </p>
             <div className="flex space-x-4">
               {SOCIAL_LINKS.map((social) => {
@@ -70,18 +70,25 @@ export default function Footer() {
                 placeholder="Your email address"
                 className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               />
-              <Button variant="default" className="w-full">
+              <Button 
+                variant="default" 
+                className="w-full"
+                aria-label="Subscribe to Kenyan By Blood Foundation newsletter"
+              >
                 Subscribe
               </Button>
             </form>
           </div>
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <h4 className="font-semibold text-lg mb-3 text-[#DC241f]">Contact Us</h4>
-            <address className="text-gray-300 not-italic">
-              <p>Riara Center, Riara Road</p>
-              <p>Nairobi, Kenya</p>
-              <p className="mt-2">+254 720 572 793</p>
-              <p>derrick@iamkenyanbyblood.org</p>
+            <address className="text-gray-300 not-italic" itemScope itemType="https://schema.org/NGO">
+              <span itemProp="name">Kenyan By Blood Foundation</span>
+              <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <p><span itemProp="streetAddress">Riara Center, Riara Road</span></p>
+                <p><span itemProp="addressLocality">Nairobi</span>, <span itemProp="addressCountry">Kenya</span></p>
+              </div>
+              <p className="mt-2"><span itemProp="telephone">+254 720 572 793</span></p>
+              <p><span itemProp="email">derrick@iamkenyanbyblood.org</span></p>
             </address>
           </div>
         </div>

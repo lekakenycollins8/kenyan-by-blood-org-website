@@ -23,12 +23,12 @@ export default function HeroContent() {
       custom={1}
       variants={fadeIn}
     >
-      {/* Headline */}
+      {/* Headline - Primary H1 with keyword-rich content */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-        <span className="text-[#DC241f]">Your Blood</span>{" "}
+        <span className="text-[#DC241f]">Blood Donation</span>{" "}
         <span className="text-black">Has The Power To</span>{" "}
         <span className="relative inline-block text-[#006600]">
-          Empower
+          Save Lives
           <svg
             className="absolute -bottom-2 left-0 w-full h-2 text-[#DC241f]"
             viewBox="0 0 100 10"
@@ -37,7 +37,7 @@ export default function HeroContent() {
             <path d="M0,5 C30,15 70,0 100,5" stroke="currentColor" strokeWidth="3" fill="none" />
           </svg>
         </span>{" "}
-        <span className="text-white">Lives Across</span>{" "}
+        <span className="text-white">Across</span>{" "}
         <span className="text-[#000000]">K</span>
         <span className="text-[#DC241f]">e</span>
         <span className="text-[#000000]">n</span>

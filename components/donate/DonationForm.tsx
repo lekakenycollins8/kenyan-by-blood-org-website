@@ -32,7 +32,7 @@ export default function DonationForm() {
           className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden"
         >
           <div className="bg-gradient-to-r from-[#DC241f] to-[#b01c19] p-8 text-white">
-            <h2 className="text-3xl font-bold mb-2">{donationForm.title}</h2>
+            <h2 className="text-3xl font-bold mb-2">Donate Blood in Kenya | Support Kenyan By Blood Foundation</h2>
             <p>{donationForm.intro}</p>
           </div>
 
@@ -100,7 +100,10 @@ export default function DonationForm() {
                 <Shield className="h-5 w-5 mr-2 text-[#006600]" />
                 <p className="text-sm">{donationForm.trustMessage}</p>
               </div>
-              <Button className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full">
+              <Button 
+                className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full"
+                aria-label="Complete your donation to support blood donation in Kenya"
+              >
                 {donationForm.ctaLabel}
               </Button>
             </div>
@@ -116,21 +119,21 @@ export default function DonationForm() {
           <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
             <CreditCard className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
-              <h3 className="font-bold mb-1">Secure Payments</h3>
+              <h4 className="font-bold mb-1">Secure Payments</h4>
               <p className="text-sm text-gray-600">All transactions are encrypted and secure.</p>
             </div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
             <Phone className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
-              <h3 className="font-bold mb-1">Need Help?</h3>
+              <h4 className="font-bold mb-1">Need Help?</h4>
               <p className="text-sm text-gray-600">Call us at +254 123 456 789 for assistance.</p>
             </div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
             <Building className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
-              <h3 className="font-bold mb-1">Tax Deductible</h3>
+              <h4 className="font-bold mb-1">Tax Deductible</h4>
               <p className="text-sm text-gray-600">All donations are eligible for tax deductions.</p>
             </div>
           </div>

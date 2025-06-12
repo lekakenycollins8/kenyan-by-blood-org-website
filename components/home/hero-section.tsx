@@ -21,7 +21,7 @@ export default function HeroSection() {
           <div className="relative w-full h-full">
             <Image
               src="https://images.pexels.com/photos/6823539/pexels-photo-6823539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Blood donation"
+              alt="Blood donation awareness campaign in Kenya - Kenyan By Blood Foundation"
               fill
               priority
               sizes="100vw"
@@ -71,7 +71,7 @@ export default function HeroSection() {
                   <Heart className="h-6 w-6 text-[#DC241f]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 mb-1">Donate Blood</h3>
+                  <h2 className="font-bold text-gray-900 mb-1">Donate Blood</h2>
                   <p className="text-sm text-gray-600">Your donation helps save lives across Kenya.</p>
                 </div>
                 <Button
@@ -91,7 +91,7 @@ export default function HeroSection() {
                   <Calendar className="h-6 w-6 text-[#006600]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 mb-1">Schedule Visit</h3>
+                  <h2 className="font-bold text-gray-900 mb-1">Schedule Visit</h2>
                   <p className="text-sm text-gray-600">Book your donation appointment in advance.</p>
                 </div>
                 <Button
@@ -111,7 +111,7 @@ export default function HeroSection() {
                   <Users className="h-6 w-6 text-black" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 mb-1">Join Community</h3>
+                  <h2 className="font-bold text-gray-900 mb-1">Join Community</h2>
                   <p className="text-sm text-gray-600">Connect with other donors and recipients.</p>
                 </div>
                 <Button

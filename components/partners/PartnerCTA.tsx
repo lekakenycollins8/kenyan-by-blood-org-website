@@ -61,11 +61,7 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
             </div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              {data.headline.split(' ').map((word, index) => (
-                <span key={index} className={word.toLowerCase().includes('partner') ? "text-red-400" : ""}>
-                  {word}{' '}
-                </span>
-              ))}
+              Become a <span className="text-red-400">Blood Donation Partner</span> in Kenya Today
             </h2>
             
             <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -99,10 +95,12 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
                 <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
               </a>
               <a
-                href="/partnership-guide"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white font-semibold rounded-full transition-all duration-300 text-sm sm:text-base"
+                href="/contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-full transition-all duration-300 text-base sm:text-lg"
+                aria-label="Partner with Kenyan By Blood Foundation - Contact us now"
               >
-                Download Partnership Guide
+                <span>Partner With Us Today</span>
+                <ArrowRight className="w-5 h-5" />
               </a>
             </div>
             
@@ -124,7 +122,7 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
                 <Heart className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Ready to Partner?
+                Ready to Partner with Kenyan By Blood Foundation?
               </h3>
               <p className="text-sm sm:text-base text-white/70">
                 Connect with our partnership team today
@@ -156,6 +154,7 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
               <a
                 href="/contact"
                 className="group w-full flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 bg-gradient-to-r from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 border border-white/30 text-white font-medium rounded-lg sm:rounded-xl transition-all duration-300 text-sm sm:text-base"
+                aria-label="Schedule a meeting with Kenyan By Blood Foundation partnership team"
               >
                 <Calendar className="w-4 sm:w-5 h-4 sm:h-5" />
                 <span>Schedule a Meeting</span>

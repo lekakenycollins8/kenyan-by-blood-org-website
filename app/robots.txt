@@ -1,4 +1,4 @@
-# robots.txt for Kenyan by blood Foundation
+# robots.txt for Kenyan By Blood Foundation
 
 User-agent: *
 Allow: /
@@ -10,9 +10,5 @@ Allow: /donate
 Allow: /partners
 Allow: /contact
 
-
 # Sitemap
-Sitemap: https://www.iamkenyanbyblood.org/sitemap.xml
-
-# Crawl delay to prevent server overload
-Crawl-delay: 10
+Sitemap: https://iamkenyanbyblood.org/sitemap.xml

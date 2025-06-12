@@ -11,10 +11,20 @@ import Footer from "@/components/layout/footer"
 import CallToAction from "@/components/about/call-to-action"
 import TeamSection from "@/components/about/team-section";
 
-export const metadata = {
-  title: "About Us | Kenyan By Blood Foundation",
-  keywords: ["Kenyan By Blood Foundation", "About Us", "Blood Donation", "Kenya"],
-  description: "Learn about Kenyan By Blood Foundation's mission to champion access to safe blood across Kenya.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Kenyan By Blood Foundation | Blood Donation NGO Kenya",
+  description: "Learn about Kenyan By Blood Foundation's mission to champion access to safe blood across Kenya. Discover our story, impact, and approach to blood donation awareness.",
+  keywords: ["Kenyan By Blood Foundation", "KBBF", "blood donation NGO Kenya", "blood donation awareness Kenya", "blood donation charity Kenya", "blood donation Nairobi"],
+  alternates: {
+    canonical: "https://iamkenyanbyblood.org/about",
+  },
+  openGraph: {
+    title: "About Us | Kenyan By Blood Foundation",
+    description: "Learn about Kenyan By Blood Foundation's mission to champion access to safe blood across Kenya. Discover our story, impact, and approach to blood donation awareness.",
+    url: "https://iamkenyanbyblood.org/about",
+  }
 }
 
 export default function AboutPage() {

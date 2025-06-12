@@ -20,7 +20,7 @@ export default function AboutHero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/about-page-image.jpg"
-          alt="Kenyan blood donation"
+          alt="Kenyan By Blood Foundation team members organizing a blood donation drive in Kenya"
           fill
           priority
           className="object-cover"
@@ -58,7 +58,7 @@ export default function AboutHero() {
 
           {/* Main Title */}
           <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Kenyan by Blood Foundation: <span className="text-[#DC241f]">Empowering Lifesaving Change</span>
+            About Kenyan By Blood Foundation: <span className="text-[#DC241f]">Blood Donation Advocacy in Kenya</span>
           </h1>
 
           {/* Subtitle */}
@@ -71,6 +71,7 @@ export default function AboutHero() {
             <Button
               onClick={scrollToMission}
               className="bg-[#DC241f] hover:bg-[#b01c19] text-white px-8 py-6 rounded-full text-lg font-medium shadow-lg group"
+              aria-label="Learn about our mission to improve blood donation in Kenya"
             >
               See Our Mission
               <ArrowDown className="ml-2 h-5 w-5 group-hover:animate-bounce" />
@@ -80,6 +81,7 @@ export default function AboutHero() {
               <Button
               variant="outline"
               className="border-white text-black hover:bg-white/20 px-8 py-6 rounded-full text-lg font-medium"
+              aria-label="Donate blood in Kenya through Kenyan By Blood Foundation"
               >
               Donate Now
               </Button>

@@ -19,7 +19,7 @@ export default function WhoWeAre() {
             <Heart className="h-4 w-4" />
             <span className="font-semibold text-sm">Our Story</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold">{whoWeAreData.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">About Kenyan By Blood Foundation | Blood Donation Advocacy in Kenya</h2>
         </div>
 
         {/* Main Content */}
@@ -49,9 +49,10 @@ export default function WhoWeAre() {
                 <div className="aspect-[4/3] relative">
                   <Image
                     src={whoWeAreData.image}
-                    alt="Kenya team"
+                    alt="Kenyan By Blood Foundation team working with Ministry of Health on blood donation initiatives in Kenya"
                     fill
                     className="object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 </div>
@@ -87,7 +88,7 @@ export default function WhoWeAre() {
                       <div className="w-3 h-3 rounded-full bg-[#DC241f]"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">Kenya Blood Transfusion Services</h3>
+                      <h3 className="text-xl font-bold mb-2 text-gray-900" id="blood-transfusion-services">Kenya Blood Transfusion Services</h3>
                       <p className="text-gray-700">
                         The Kenya Blood Transfusion and Transplant Services acknowledges the importance of access to
                         safe blood in the Kenyan health sector.
@@ -100,7 +101,7 @@ export default function WhoWeAre() {
                       <div className="w-3 h-3 rounded-full bg-[#006600]"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">Kenyan by Blood Foundation</h3>
+                      <h3 className="text-xl font-bold mb-2 text-gray-900" id="foundation-overview">Kenyan By Blood Foundation</h3>
                       <p className="text-gray-700">
                         As an official partner to the Ministry of Health, we work in sensitization, capacity building,
                         resource mobilization, and transportation of blood.
@@ -113,7 +114,7 @@ export default function WhoWeAre() {
                       <div className="w-3 h-3 rounded-full bg-black"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">Our Partnership</h3>
+                      <h3 className="text-xl font-bold mb-2 text-gray-900" id="blood-donation-partnership">Our Blood Donation Partnership</h3>
                       <p className="text-gray-700">
                         Together, we bridge the gap in access to safe blood across the country, ensuring that all
                         Kenyans have access to life-saving blood when needed.

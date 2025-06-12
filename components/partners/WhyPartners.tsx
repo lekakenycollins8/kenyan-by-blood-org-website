@@ -46,7 +46,7 @@ export default function WhyPartner({ data }: WhyPartnerProps) {
             <span className="text-red-700 text-sm font-medium">Partnership Impact</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {data.title}
+            Partner with Kenyan By Blood Foundation | Blood Donation Partnerships in Kenya
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Together, we're building a sustainable blood donation ecosystem that serves every corner of Kenya
@@ -82,8 +82,9 @@ export default function WhyPartner({ data }: WhyPartnerProps) {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src={data.image}
-                alt="Partnership impact"
+                alt="Blood donation partnership impact in Kenya - Kenyan By Blood Foundation partners making a difference"
                 className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
@@ -105,7 +106,7 @@ export default function WhyPartner({ data }: WhyPartnerProps) {
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-gray-900 mb-3" id={`benefit-${index}`}>
                 {benefit.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
