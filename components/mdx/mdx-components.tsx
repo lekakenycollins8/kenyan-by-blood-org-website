@@ -42,8 +42,10 @@ const mdxComponents: MDXRemoteProps['components'] = {
         <Link 
           href={href} 
           className="text-red-600 hover:text-red-800 transition-colors duration-200 underline"
-          {...props}
-        />
+          legacyBehavior
+        >
+          <a {...props} />
+        </Link>
       );
     }
     return (
