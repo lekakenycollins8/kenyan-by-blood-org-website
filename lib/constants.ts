@@ -11,6 +11,8 @@ export const NAV_LINKS = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Donate", path: "/donate" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Blog", path: "/blog" },
   { name: "Partner With Us", path: "/partners" },
   { name: "Contact", path: "/contact" },
 ];
@@ -62,10 +64,11 @@ export const FOOTER_LINKS = [
   {
     title: "Resources",
     links: [
+      { name: "Gallery", path: "/gallery" },
+      { name: "Blog", path: "/blog" },
       { name: "Blood Types", path: "#" },
       { name: "FAQs", path: "/about#faqs" },
       { name: "Donation Process", path: "#process" },
-      { name: "Research", path: "#" },
     ],
   },
   {

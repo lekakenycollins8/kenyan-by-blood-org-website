@@ -6,6 +6,8 @@ import ProcessSection from "@/components/home/process-section";
 import TestimonialsSection from "@/components/home/testimonials-section";
 // import EventsSection from "@/components/home/events-section";
 import CTASection from "@/components/home/cta-section";
+import GalleryPreview from "@/components/home/gallery-preview";
+import BlogPreview from "@/components/home/blog-preview";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -25,7 +27,8 @@ export default function Home() {
       <ImpactSection />
       <ProcessSection />
       <TestimonialsSection />
-      {/* <EventsSection /> */}
+      <GalleryPreview />
+      <BlogPreview />
       <CTASection />
       <Footer />
     </main>
