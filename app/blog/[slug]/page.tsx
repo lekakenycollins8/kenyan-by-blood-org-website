@@ -8,6 +8,16 @@ import { getPostBySlug, getAllPosts, getAllCategories } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from 'next';
 
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  // Use Promise.resolve to ensure we get all posts
+  const posts = await Promise.resolve(getAllPosts());
+  
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 type Props = {
   params: { slug: string }
 }
@@ -16,7 +26,9 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const postData = await getPostBySlug(params.slug);
+  // Await params before using them
+  const resolvedParams = await Promise.resolve(params);
+  const postData = await getPostBySlug(resolvedParams.slug);
   
   if (!postData) {
     return {
@@ -36,7 +48,9 @@ export async function generateMetadata(
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const postData = await getPostBySlug(params.slug);
+  // Await params before using them
+  const resolvedParams = await Promise.resolve(params);
+  const postData = await getPostBySlug(resolvedParams.slug);
   
   if (!postData) {
     notFound();
@@ -47,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
   
   // Create a post object with the necessary data
   const post = {
-    slug: params.slug,
+    slug: resolvedParams.slug,
     title: postData.frontMatter.title,
     excerpt: postData.frontMatter.excerpt,
     coverImage: postData.frontMatter.coverImage,
@@ -62,7 +76,7 @@ export default async function BlogPostPage({ params }: Props) {
   
   // Find related posts based on categories
   const relatedPosts = allPosts
-    .filter(p => p.slug !== params.slug) // Exclude current post
+    .filter(p => p.slug !== resolvedParams.slug) // Exclude current post
     .filter(p => p.categories.some(category => post.categories.includes(category)))
     .slice(0, 3); // Limit to 3 related posts
   
@@ -84,7 +98,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="space-y-8">
             <BlogSidebar 
               categories={categories} 
-              recentPosts={allPosts.filter(p => p.slug !== params.slug).slice(0, 5)} 
+              recentPosts={allPosts.filter(p => p.slug !== resolvedParams.slug).slice(0, 5)} 
             />
           </div>
         </div>
