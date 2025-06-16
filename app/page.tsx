@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="min-h-screen">
       <Header />

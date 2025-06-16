@@ -1,11 +1,11 @@
 "use client";
 import { BlogPost } from "@/data/blog";
 import { Facebook, Twitter, Linkedin, Share2 } from "lucide-react";
-import ReactMarkdown from 'react-markdown';
+import { MDXRemote } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-// This is a simple implementation. In a real-world scenario, you might want to use a more
-// robust markdown renderer like MDX or a rich text editor like TipTap.
-export default function PostContent({ post }: { post: BlogPost }) {
+// Using MDX for rendering blog content with enhanced features
+export default function PostContent({ post, mdxSource }: { post: BlogPost, mdxSource: MDXRemoteSerializeResult }) {
   // Function to handle social sharing
   const handleShare = (platform: string) => {
     const url = encodeURIComponent(window.location.href);
@@ -79,7 +79,7 @@ export default function PostContent({ post }: { post: BlogPost }) {
         
         {/* Article content */}
         <div className="prose prose-lg max-w-none">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <MDXRemote {...mdxSource} />
         </div>
         
         {/* Tags */}

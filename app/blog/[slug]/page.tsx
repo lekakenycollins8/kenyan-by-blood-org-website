@@ -4,7 +4,7 @@ import PostContent from "@/components/blog/post-content";
 import PostHeader from "@/components/blog/post-header";
 import BlogSidebar from "@/components/blog/blog-sidebar";
 import RelatedPosts from "@/components/blog/related-posts";
-import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blog";
+import { getPostBySlug, getAllPosts, getAllCategories } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from 'next';
 
@@ -16,35 +16,53 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const post = BLOG_POSTS.find(post => post.slug === params.slug);
+  const postData = await getPostBySlug(params.slug);
   
-  if (!post) {
+  if (!postData) {
     return {
       title: "Post Not Found | Kenyan By Blood Foundation",
     };
   }
   
   return {
-    title: `${post.title} | Blog | Kenyan By Blood Foundation`,
-    description: post.excerpt,
+    title: `${postData.frontMatter.title} | Blog | Kenyan By Blood Foundation`,
+    description: postData.frontMatter.excerpt,
     openGraph: {
-      images: [post.coverImage],
+      images: [postData.frontMatter.coverImage],
       type: 'article',
-      authors: [post.author.name],
+      authors: [postData.frontMatter.author.name],
     },
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = BLOG_POSTS.find(post => post.slug === params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const postData = await getPostBySlug(params.slug);
   
-  if (!post) {
+  if (!postData) {
     notFound();
   }
   
+  const allPosts = await getAllPosts();
+  const categories = await getAllCategories();
+  
+  // Create a post object with the necessary data
+  const post = {
+    slug: params.slug,
+    title: postData.frontMatter.title,
+    excerpt: postData.frontMatter.excerpt,
+    coverImage: postData.frontMatter.coverImage,
+    date: postData.frontMatter.date,
+    author: postData.frontMatter.author,
+    categories: postData.frontMatter.categories || [],
+    tags: postData.frontMatter.tags || [],
+    readTime: postData.frontMatter.readTime,
+    content: '',
+    mdxSource: postData.mdxSource
+  };
+  
   // Find related posts based on categories
-  const relatedPosts = BLOG_POSTS
-    .filter(p => p.slug !== post.slug) // Exclude current post
+  const relatedPosts = allPosts
+    .filter(p => p.slug !== params.slug) // Exclude current post
     .filter(p => p.categories.some(category => post.categories.includes(category)))
     .slice(0, 3); // Limit to 3 related posts
   
@@ -55,7 +73,7 @@ export default function BlogPostPage({ params }: Props) {
       <section className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-3">
-            <PostContent post={post} />
+            <PostContent post={post} mdxSource={postData.mdxSource} />
             
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -65,8 +83,8 @@ export default function BlogPostPage({ params }: Props) {
           </div>
           <div className="space-y-8">
             <BlogSidebar 
-              categories={BLOG_CATEGORIES} 
-              recentPosts={BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 5)} 
+              categories={categories} 
+              recentPosts={allPosts.filter(p => p.slug !== params.slug).slice(0, 5)} 
             />
           </div>
         </div>

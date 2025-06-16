@@ -1,13 +1,14 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { BLOG_POSTS } from "@/data/blog";
+import { getAllPosts } from "@/lib/mdx";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BlogPost } from "@/data/blog";
 
-export default function BlogPreview() {
-  // Get the latest 3 blog posts for the preview
-  const previewPosts = BLOG_POSTS.slice(0, 3);
+export default async function BlogPreview() {
+  // Get the latest 3 blog posts
+  const posts = await getAllPosts();
+  const previewPosts = posts.slice(0, 3);
 
   return (
     <section className="py-16">
@@ -31,7 +32,7 @@ export default function BlogPreview() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {previewPosts.map((post) => (
+          {previewPosts.map((post: BlogPost) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
                 <div className="relative h-48 w-full">
@@ -46,7 +47,7 @@ export default function BlogPreview() {
                 
                 <div className="p-5 flex-grow flex flex-col">
                   <div className="flex flex-wrap gap-2 mb-2">
-                    {post.categories.slice(0, 1).map((category) => (
+                    {post.categories.slice(0, 1).map((category: string) => (
                       <span 
                         key={category} 
                         className="text-xs font-medium px-2 py-1 bg-[#006600]/10 text-[#006600] rounded-full"

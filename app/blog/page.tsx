@@ -3,7 +3,7 @@ import Footer from "@/components/layout/footer";
 import BlogHeader from "@/components/blog/blog-header";
 import PostGrid from "@/components/blog/post-grid";
 import BlogSidebar from "@/components/blog/blog-sidebar";
-import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blog";
+import { getAllPosts, getAllCategories } from "@/lib/mdx";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   keywords: ["blood donation blog", "Kenya blood donation stories", "Kenyan By Blood news", "blood donation awareness", "impact stories"],
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllPosts();
+  const categories = await getAllCategories();
+  
   return (
     <main className="min-h-screen">
       <Header />
@@ -20,10 +23,10 @@ export default function BlogPage() {
       <section className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-3">
-            <PostGrid posts={BLOG_POSTS} />
+            <PostGrid posts={posts} />
           </div>
           <div className="space-y-8">
-            <BlogSidebar categories={BLOG_CATEGORIES} recentPosts={BLOG_POSTS.slice(0, 5)} />
+            <BlogSidebar categories={categories} recentPosts={posts.slice(0, 5)} />
           </div>
         </div>
       </section>
