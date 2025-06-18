@@ -101,7 +101,7 @@ export default function PostContent({ post, mdxSource }: { post: BlogPost, mdxSo
         )}
         
         {/* Author bio */}
-        {post.author.bio && (
+        {post.author?.bio && (
           <div className="mt-8 pt-6 border-t">
             <h4 className="text-lg font-medium mb-3">About the Author</h4>
             <p className="text-gray-600">{post.author.bio}</p>

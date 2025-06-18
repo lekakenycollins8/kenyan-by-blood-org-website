@@ -14,7 +14,7 @@ export interface BlogPost {
   content?: string;
   coverImage: string;
   date: string;
-  author: Author;
+  author?: Author;
   categories: string[];
   tags?: string[];
   readTime?: number;

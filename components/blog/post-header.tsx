@@ -62,25 +62,27 @@ export default function PostHeader({ post }: { post: BlogPost }) {
             )}
           </div>
           
-          <div className="flex items-center">
-            {post.author.avatar && (
-              <div className="relative h-12 w-12 rounded-full overflow-hidden mr-3 border-2 border-white">
-                <Image
-                  src={post.author.avatar}
-                  alt={post.author.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            )}
-            
-            <div>
-              <p className="font-medium text-white">{post.author.name}</p>
-              {post.author.role && (
-                <p className="text-sm text-white/80">{post.author.role}</p>
+          {post.author?.name && (
+            <div className="flex items-center">
+              {post.author.avatar && (
+                <div className="relative h-12 w-12 rounded-full overflow-hidden mr-3 border-2 border-white">
+                  <Image
+                    src={post.author.avatar}
+                    alt={post.author.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               )}
+              
+              <div>
+                <p className="font-medium text-white">{post.author.name}</p>
+                {post.author.role && (
+                  <p className="text-sm text-white/80">{post.author.role}</p>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

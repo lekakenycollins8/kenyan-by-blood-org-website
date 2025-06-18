@@ -36,15 +36,24 @@ export async function generateMetadata(
     };
   }
   
-  return {
+  const metadata: Metadata = {
     title: `${postData.frontMatter.title} | Blog | Kenyan By Blood Foundation`,
     description: postData.frontMatter.excerpt,
     openGraph: {
       images: [postData.frontMatter.coverImage],
       type: 'article',
-      authors: [postData.frontMatter.author.name],
     },
   };
+  
+  // Add author to OpenGraph metadata only if it exists
+  if (postData.frontMatter.author?.name) {
+    metadata.openGraph = {
+      ...metadata.openGraph,
+      authors: [postData.frontMatter.author.name],
+    };
+  }
+  
+  return metadata;
 }
 
 export default async function BlogPostPage({ params }: Props) {

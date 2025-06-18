@@ -48,7 +48,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         excerpt: post.frontMatter.excerpt,
         coverImage: post.frontMatter.coverImage,
         date: post.frontMatter.date,
-        author: post.frontMatter.author as Author,
+        author: post.frontMatter.author ? (post.frontMatter.author as Author) : undefined,
         categories: post.frontMatter.categories || [],
         tags: post.frontMatter.tags || [],
         readTime: post.frontMatter.readTime,

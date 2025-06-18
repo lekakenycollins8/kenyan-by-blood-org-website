@@ -54,25 +54,27 @@ export default function PostCard({ post }: { post: BlogPost }) {
           )}
         </div>
         
-        <div className="flex items-center">
-          {post.author.avatar && (
-            <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3">
-              <Image
-                src={post.author.avatar}
-                alt={post.author.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-          )}
-          
-          <div>
-            <p className="font-medium text-gray-900">{post.author.name}</p>
-            {post.author.role && (
-              <p className="text-xs text-gray-500">{post.author.role}</p>
+        {post.author?.name && (
+          <div className="flex items-center">
+            {post.author.avatar && (
+              <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3">
+                <Image
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             )}
+            
+            <div>
+              <p className="font-medium text-gray-900">{post.author.name}</p>
+              {post.author.role && (
+                <p className="text-xs text-gray-500">{post.author.role}</p>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
