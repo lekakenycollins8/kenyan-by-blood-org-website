@@ -40,7 +40,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "6",
-    name: "Price Muraguri",
+    name: "Prince Muraguri",
     role: "Research Monitoring and Evaluation Lead",
     imageUrl: "/images/team/price.jpg",
   },
@@ -52,18 +52,24 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "8",
-    name: "Valentine Mwende",
+    name: "Dr. Valentine Mwende",
     role: "Spokesperson",
     imageUrl: "/images/team/valentine.jpg",
   },
   {
     id: "9 ",
     name: "Lamech Koibarak",
-    role: "",
+    role: "Monitoring and Evaluation Lead",
     imageUrl: "/images/team/lamech.jpg",
   },
   {
     id: "10",
+    name: "Rashid Salim",
+    role: "Programs Coordinator",
+    imageUrl: "/images/team/rashid.jpg",
+  },
+  {
+    id: "11",
     name: "Lekakeny Collins",
     role: "IT and Development Lead",
     imageUrl: "/images/team/lekakeny.jpg",

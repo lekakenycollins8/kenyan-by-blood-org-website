@@ -14,7 +14,8 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const album = GALLERY_ALBUMS.find(album => album.id === params.albumId);
+  const { albumId } = await Promise.resolve(params);
+  const album = GALLERY_ALBUMS.find(album => album.id === albumId);
   
   if (!album) {
     return {
@@ -31,8 +32,9 @@ export async function generateMetadata(
   };
 }
 
-export default function AlbumPage({ params }: Props) {
-  const album = GALLERY_ALBUMS.find(album => album.id === params.albumId);
+export default async function AlbumPage({ params }: Props) {
+  const { albumId } = await Promise.resolve(params);
+  const album = GALLERY_ALBUMS.find(album => album.id === albumId);
   
   if (!album) {
     notFound();

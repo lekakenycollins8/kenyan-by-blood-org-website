@@ -24,102 +24,182 @@ export interface Album {
 // Sample gallery data
 export const GALLERY_ALBUMS: Album[] = [
   {
-    id: "blood-drive-nairobi-2025",
-    title: "Nairobi Blood Drive 2025",
-    description: "Our largest blood drive event in Nairobi, with over 500 donors participating.",
-    coverImage: "https://images.pexels.com/photos/6823539/pexels-photo-6823539.jpeg",
-    date: "March 15, 2025",
-    location: "Kenyatta National Hospital, Nairobi",
+    id: "samburu-blood-drive-2025",
+    title: "World Blood Donor Day Celebrations in Samburu Blood Drive 2025",
+    description: "A blood drive event in Samburu in celebrations of the World Blood Donor Day with over 500 donors participating.",
+    coverImage: "/images/samburu-BD/samburu-0.jpg",
+    date: "June 14, 2025",
+    location: "Samburu County referral hospital, Samburu",
     photos: [
       {
-        id: "nairobi-1",
-        title: "Registration Desk",
-        description: "Volunteers helping donors complete their registration forms.",
-        imageUrl: "https://images.pexels.com/photos/6823539/pexels-photo-6823539.jpeg",
-        date: "March 15, 2025",
-        eventName: "Nairobi Blood Drive 2025",
-        location: "Kenyatta National Hospital",
+        id: "samburu-1",
+        title: "Donors Lined Up",
+        description: "Donors lined up for a photo opportunity before donating blood.",
+        imageUrl: "/images/samburu-BD/samburu-1.jpg",
+        date: "June 14, 2025",
+        eventName: "Samburu Blood Drive 2025",
+        location: "Samburu County referral hospital, Samburu",
         tags: ["registration", "volunteers"]
       },
       {
-        id: "nairobi-2",
-        title: "Donation in Progress",
-        description: "A donor giving blood with assistance from our medical staff.",
-        imageUrl: "https://images.pexels.com/photos/6823559/pexels-photo-6823559.jpeg",
-        date: "March 15, 2025",
-        eventName: "Nairobi Blood Drive 2025",
-        location: "Kenyatta National Hospital",
+        id: "samburu-2",
+        title: "Changia Damu Team in Action",
+        description: "Changia Damu team members assisting donors during the blood drive.",
+        imageUrl: "/images/samburu-BD/samburu-2.jpg",
+        date: "June 14, 2025",
+        eventName: "Samburu Blood Drive 2025",
+        location: "Samburu County referral hospital, Samburu",
         tags: ["donation", "medical"]
       },
       {
-        id: "nairobi-3",
-        title: "Post-Donation Refreshments",
-        description: "Donors enjoying refreshments after their donation.",
-        imageUrl: "https://images.pexels.com/photos/6823674/pexels-photo-6823674.jpeg",
-        date: "March 15, 2025",
-        eventName: "Nairobi Blood Drive 2025",
-        location: "Kenyatta National Hospital",
+        id: "samburu-3",
+        title: "Donation in Progress",  
+        description: "A donor giving blood during the event.",
+        imageUrl: "/images/samburu-BD/samburu-3.jpg",
+        date: "June 14, 2025",
+        eventName: "Samburu Blood Drive 2025",
+        location: "Samburu County referral hospital, Samburu",
         tags: ["refreshments", "recovery"]
+      },
+      {
+        id: "samburu-4",
+        title: "Medics with Donors unpacking Supplies",
+        description: "A group of medics with donors unpacking supplies for the blood drive.",
+        imageUrl: "/images/samburu-BD/samburu-4.jpg",
+        date: "June 14, 2025",
+        eventName: "Samburu Blood Drive 2025",
+        location: "Samburu County referral hospital, Samburu",
+        tags: ["group", "community"]
+      },
+      {
+        id: "samburu-5",
+        title: "Group Photo of Donation in Progress",
+        description: "A group photo of the donors.",
+        imageUrl: "/images/samburu-BD/samburu-5.jpg",
+        date: "June 14, 2025",
+        eventName: "Samburu Blood Drive 2025",
+        location: "Samburu County referral hospital, Samburu",
+        tags: ["community", "engagement"]
       }
     ]
   },
   {
-    id: "mombasa-community-drive-2025",
-    title: "Mombasa Community Drive",
-    description: "Our first community blood drive in Mombasa, bringing together local residents.",
-    coverImage: "https://images.pexels.com/photos/8460388/pexels-photo-8460388.jpeg",
-    date: "April 22, 2025",
-    location: "Mombasa Beach Hotel, Mombasa",
+    id: "palladium-group-office-drive",
+    title: "Palladium Group Office Blood Drive",
+    description: "A successful blood drive at the Palladium Group office, with employees actively participating.",
+    coverImage: "/images/palladium/palladium-0.jpg",
+    date: "June 21, 2024",
+    location: "Palladium Group Office, Nairobi",
     photos: [
       {
-        id: "mombasa-1",
-        title: "Community Gathering",
-        description: "Local community members gathering for the blood drive event.",
-        imageUrl: "https://images.pexels.com/photos/8460388/pexels-photo-8460388.jpeg",
-        date: "April 22, 2025",
-        eventName: "Mombasa Community Drive",
-        location: "Mombasa Beach Hotel",
-        tags: ["community", "gathering"]
+        id: "palladium-1",
+        title: "Medics with Employee Donors",
+        description: "Employees of Palladium Group with medics being prepared for blood donation during the office drive.",
+        imageUrl: "/images/palladium/palladium-1.JPG",
+        date: "June 21, 2024",
+        eventName: "Palladium Group Office Blood Drive",
+        location: "Palladium Group Office, Nairobi",
+        tags: ["employees", "donation"]
       },
       {
-        id: "mombasa-2",
-        title: "Medical Screening",
+        id: "palladium-2",
+        title: "Organizing Team and Volunteers",
+        description: "The organizing team from KBBF and Palladium Group facilitating the blood drive.",
+        imageUrl: "/images/palladium/palladium-2.jpg",
+        date: "June 21, 2024",
+        eventName: "Palladium Group Office Blood Drive",
+        location: "Palladium Group Office, Nairobi",
+        tags: ["team", "organization"]
+      },
+      {
+        id: "palladium-3",
+        title: "Donor Screening",
         description: "Medical professionals conducting pre-donation screenings.",
-        imageUrl: "https://images.pexels.com/photos/8460501/pexels-photo-8460501.jpeg",
-        date: "April 22, 2025",
-        eventName: "Mombasa Community Drive",
-        location: "Mombasa Beach Hotel",
-        tags: ["screening", "medical"]
+        imageUrl: "/images/palladium/palladium-3.jpg",
+        date: "June 21, 2024",
+        eventName: "Palladium Group Office Blood Drive",
+        location: "Palladium Group Office, Nairobi",
+        tags: ["refreshments", "community"]
+      },
+      {
+        id: "palladium-4",
+        title: "Blood Donation in Progress",
+        description: "A group of employees donating blood during the drive.",
+        imageUrl: "/images/palladium/palladium-4.JPG",
+        date: "June 21, 2024",
+        eventName: "Palladium Group Office Blood Drive",
+        location: "Palladium Group Office, Nairobi",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "palladium-5",
+        title: "Group Photo of Employees Donating Blood",
+        description: "A group photo of all employees donating blood.",
+        imageUrl: "/images/palladium/palladium-5.jpg",
+        date: "June 21, 2024",
+        eventName: "Palladium Group Office Blood Drive",
+        location: "Palladium Group Office, Nairobi",
+        tags: ["community", "engagement"]
       }
     ]
   },
   {
-    id: "university-of-nairobi-2025",
-    title: "University of Nairobi Campaign",
-    description: "Students and faculty coming together to donate blood at the university campus.",
-    coverImage: "https://images.pexels.com/photos/8376266/pexels-photo-8376266.jpeg",
-    date: "May 10, 2025",
-    location: "University of Nairobi Campus",
+    id: "embu-weekend-plan-ushers",
+    title: "Embu Weekend Plan Ushers Anniversary Blood Drive",
+    description: "A blood drive event organized by the Embu Weekend Plan Ushers to celebrate their anniversary with a focus on community health.",
+    coverImage: "/images/embu-ushers/embu-03.jpg",
+    date: "Novermber 9, 2024",
+    location: "Pkemu Gardens, Embu",
     photos: [
       {
-        id: "uon-1",
-        title: "Student Volunteers",
-        description: "Student volunteers helping organize the blood drive.",
-        imageUrl: "https://images.pexels.com/photos/8376266/pexels-photo-8376266.jpeg",
-        date: "May 10, 2025",
-        eventName: "University of Nairobi Campaign",
-        location: "University of Nairobi Campus",
-        tags: ["students", "volunteers"]
+        id: "embu-1",
+        title: "Donor Screening",
+        description: "Medical professionals screening donors before the blood donation.",
+        imageUrl: "/images/embu-ushers/embu-0.jpg",
+        date: "November 9, 2024",
+        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
+        location: "Pkemu Gardens, Embu",
+        tags: ["screening", "medical"]
       },
       {
-        id: "uon-2",
-        title: "Faculty Participation",
-        description: "University faculty members participating in the blood drive.",
-        imageUrl: "https://images.pexels.com/photos/8376274/pexels-photo-8376274.jpeg",
-        date: "May 10, 2025",
-        eventName: "University of Nairobi Campaign",
-        location: "University of Nairobi Campus",
-        tags: ["faculty", "donation"]
+        id: "embu-2",
+        title: "Donor Registration",
+        description: "Donors registering for the blood drive at the event.",
+        imageUrl: "/images/embu-ushers/embu-02.jpg",
+        date: "November 9, 2024",
+        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
+        location: "Pkemu Gardens, Embu",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "embu-3",
+        title: "Donors Lined Up",
+        description: "Donors lined up to give blood during the event.",
+        imageUrl: "/images/embu-ushers/embu-04.jpg",
+        date: "November 9, 2024",
+        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
+        location: "Pkemu Gardens, Embu",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "embu-4",
+        title: "Donor donating Blood",
+        description: "A donor giving blood during the event.",
+        imageUrl: "/images/embu-ushers/embu-04.jpg",
+        date: "November 9, 2024",
+        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
+        location: "Pkemu Gardens, Embu",
+        tags: ["refreshments", "community"]
+      },
+      {
+        id: "embu-5",
+        title: "Organizing Team and Volunteers",
+        description: "The organizing team from KBBF and Embu Weekend Plan Ushers facilitating the blood drive.",
+        imageUrl: "/images/embu-ushers/embu-06.jpg",
+        date: "November 9, 2024",
+        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
+        location: "Pkemu Gardens, Embu",
+        tags: ["team", "organization"]
       }
     ]
   }
