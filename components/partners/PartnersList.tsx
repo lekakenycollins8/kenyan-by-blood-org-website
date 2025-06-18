@@ -38,29 +38,39 @@ export default function PartnersList({ partners }: PartnersListProps) {
  // partners data
  const mockPartners = [
    {
+     name: "Ministry of Health",
+     logo: "/images/partners-logo/MOH-logo.png",
+     category: "Government"
+   },
+   {
      name: "Blood Bank Association of Kenya",
      logo: "/images/partners-logo/BBAK-logo.png",
      category: "Healthcare"
    },
    {
-     name: "Blood Health Care Network",
+     name: "Charlene Ruto Foundation",
+     logo: "/images/partners-logo/charlene.png",
+     category: "Education"
+   },
+   {
+     name: "The Good Drone Company",
+     logo: "/images/partners-logo/gdc.webp",
+     category: "NGO"
+   },
+   {
+     name: "British High Commission Kenya",
      logo: "/images/partners-logo/BHCN-logo.png",
      category: "Healthcare"
    },
    {
-     name: "Counties Ministry",
+     name: "Cape Media",
      logo: "/images/partners-logo/CM-logo.png",
-     category: "Government"
+     category: "Media"
    },
    {
-     name: "Equity Trust",
+     name: "Elimu Trust",
      logo: "/images/partners-logo/ET-logo.jpeg",
-     category: "Financial"
-   },
-   {
-     name: "ICON Group",
-     logo: "/images/partners-logo/ICON-logo.png",
-     category: "Corporate"
+     category: "Media"
    },
    {
      name: "Kenya National Blood Transfusion Service",
@@ -68,9 +78,14 @@ export default function PartnersList({ partners }: PartnersListProps) {
      category: "Government"
    },
    {
-     name: "Life Line Network Corporation",
+     name: "Lishe Living Nutritionists",
      logo: "/images/partners-logo/LLNC-logo.png",
      category: "Healthcare"
+   },
+   {
+    name: "Coalition of Blood for Africa",
+    logo: "/images/partners-logo/coba.png",
+    category: "NGO"
    },
    {
      name: "Mount Kenya University",
@@ -78,20 +93,35 @@ export default function PartnersList({ partners }: PartnersListProps) {
      category: "Education"
    },
    {
-     name: "Medical Medics",
+    name: "Palladium Group Kenya",
+    logo: "/images/partners-logo/palladium.png",
+    category: "Education"
+  },
+   {
+     name: "Media Max",
      logo: "/images/partners-logo/MM-logo.png",
-     category: "Healthcare"
+     category: "Media"
    },
    {
-     name: "Ministry of Health",
-     logo: "/images/partners-logo/MOH-logo.png",
-     category: "Government"
-   },
-   {
-     name: "Red Alliance Group",
+     name: "Radio Africa Group",
      logo: "/images/partners-logo/RAG-logo.jpeg",
-     category: "NGO"
+     category: "Media"
    },
+   {
+    name: "TV 47",
+    logo: "/images/partners-logo/tv47.jpg",
+    category: "Media"
+  },
+  {
+    name: "Association of County Students' Associations Presidents - ASCAP-K",
+    logo: "/images/partners-logo/ascap.png",
+    category: "Media"
+  },
+  {
+    name: "SRHR Alliance Kenya",
+    logo: "/images/partners-logo/srhr.jpg",
+    category: "Media"
+  },
    {
      name: "Sustainable Development Youth Alliance",
      logo: "/images/partners-logo/SDYA-logo.png",
