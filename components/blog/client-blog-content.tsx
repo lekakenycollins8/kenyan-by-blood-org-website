@@ -10,7 +10,6 @@ interface ClientBlogContentProps {
   post: BlogPost;
   mdxSource: MDXRemoteSerializeResult;
   relatedPosts: BlogPost[];
-  categories: string[];
   recentPosts: BlogPost[];
 }
 
@@ -18,7 +17,6 @@ export default function ClientBlogContent({
   post,
   mdxSource,
   relatedPosts,
-  categories,
   recentPosts,
 }: ClientBlogContentProps) {
   return (
@@ -35,7 +33,6 @@ export default function ClientBlogContent({
         </div>
         <div className="space-y-8">
           <BlogSidebar 
-            categories={categories} 
             recentPosts={recentPosts} 
           />
         </div>

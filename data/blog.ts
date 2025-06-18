@@ -15,20 +15,12 @@ export interface BlogPost {
   coverImage: string;
   date: string;
   author?: Author;
-  categories: string[];
+  categories?: string[];
   tags?: string[];
   readTime?: number;
 }
 
-// Blog categories
-export const BLOG_CATEGORIES = [
-  "Blood Donation",
-  "Impact Stories",
-  "Health Tips",
-  "Events",
-  "Community",
-  "News"
-];
+
 
 // Sample authors that can be referenced in MDX files
 export const AUTHORS: Record<string, Author> = {

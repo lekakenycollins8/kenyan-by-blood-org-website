@@ -23,16 +23,7 @@ export default function RelatedPosts({ posts }: { posts: BlogPost[] }) {
               </div>
               
               <div className="p-4 flex-grow">
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {post.categories.slice(0, 1).map((category) => (
-                    <span 
-                      key={category} 
-                      className="text-xs font-medium px-2 py-1 bg-[#006600]/10 text-[#006600] rounded-full"
-                    >
-                      {category}
-                    </span>
-                  ))}
-                </div>
+
                 
                 <h4 className="font-bold mb-2 text-gray-900 group-hover:text-[#DC241f] line-clamp-2">
                   {post.title}

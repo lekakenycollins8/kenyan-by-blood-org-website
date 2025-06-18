@@ -19,7 +19,7 @@ export default function PostCard({ post }: { post: BlogPost }) {
       
       <div className="p-6 md:w-2/3">
         <div className="flex flex-wrap gap-2 mb-3">
-          {post.categories.map((category) => (
+          {post.categories && post.categories.length > 0 && post.categories.map((category) => (
             <Link 
               key={category} 
               href={`/blog/category/${category.toLowerCase().replace(/\s+/g, '-')}`}

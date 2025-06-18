@@ -33,7 +33,7 @@ export default function PostHeader({ post }: { post: BlogPost }) {
         
         <div className="max-w-3xl">
           <div className="flex flex-wrap gap-2 mb-4">
-            {post.categories.map((category) => (
+            {post.categories && post.categories.map((category) => (
               <Link 
                 key={category} 
                 href={`/blog/category/${category.toLowerCase().replace(/\s+/g, '-')}`}

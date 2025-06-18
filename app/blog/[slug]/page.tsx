@@ -1,8 +1,8 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import PostHeader from "@/components/blog/post-header";
+import ClientHeader from "@/components/layout/client-header";
+import ClientFooter from "@/components/layout/client-footer";
+import ClientPostHeader from "@/components/blog/client-post-header";
 import ClientBlogContent from "@/components/blog/client-blog-content";
-import { getPostBySlug, getAllPosts, getAllCategories } from "@/lib/mdx";
+import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from 'next';
 
@@ -64,7 +64,6 @@ export default async function BlogPostPage({ params }: Props) {
   }
   
   const allPosts = await getAllPosts();
-  const categories = await getAllCategories();
   
   // Create a post object with the necessary data
   const post = {
@@ -74,31 +73,30 @@ export default async function BlogPostPage({ params }: Props) {
     coverImage: postData.frontMatter.coverImage,
     date: postData.frontMatter.date,
     author: postData.frontMatter.author,
-    categories: postData.frontMatter.categories || [],
+    categories: postData.frontMatter.categories,
     tags: postData.frontMatter.tags || [],
     readTime: postData.frontMatter.readTime,
     content: '',
     mdxSource: postData.mdxSource
   };
   
-  // Find related posts based on categories
+  // Get random related posts (since we don't use categories)
   const relatedPosts = allPosts
     .filter(p => p.slug !== resolvedParams.slug) // Exclude current post
-    .filter(p => p.categories.some(category => post.categories.includes(category)))
+    .sort(() => 0.5 - Math.random()) // Randomize order
     .slice(0, 3); // Limit to 3 related posts
   
   return (
     <main className="min-h-screen">
-      <Header />
-      <PostHeader post={post} />
+      <ClientHeader />
+      <ClientPostHeader post={post} />
       <ClientBlogContent
         post={post}
         mdxSource={postData.mdxSource}
         relatedPosts={relatedPosts}
-        categories={categories}
         recentPosts={allPosts.filter(p => p.slug !== resolvedParams.slug).slice(0, 5)}
       />
-      <Footer />
+      <ClientFooter />
     </main>
   );
 }

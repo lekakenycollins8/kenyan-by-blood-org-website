@@ -3,30 +3,13 @@ import Link from "next/link";
 import { BlogPost } from "@/data/blog";
 
 interface BlogSidebarProps {
-  categories: string[];
   recentPosts: BlogPost[];
 }
 
-export default function BlogSidebar({ categories, recentPosts }: BlogSidebarProps) {
+export default function BlogSidebar({ recentPosts }: BlogSidebarProps) {
   return (
     <>
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h3 className="text-lg font-bold mb-4 text-gray-900">Categories</h3>
-        <ul className="space-y-2">
-          {categories.map((category) => (
-            <li key={category}>
-              <Link 
-                href={`/blog/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
-                className="text-[#006600] hover:underline flex items-center"
-              >
-                <span className="w-2 h-2 bg-[#006600] rounded-full mr-2"></span>
-                {category}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      
+
       <div className="bg-white p-6 rounded-lg shadow">
         <h3 className="text-lg font-bold mb-4 text-gray-900">Recent Posts</h3>
         <ul className="space-y-4">

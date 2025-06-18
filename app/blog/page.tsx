@@ -1,9 +1,8 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import ClientHeader from "@/components/layout/client-header";
+import ClientFooter from "@/components/layout/client-footer";
 import BlogHeader from "@/components/blog/blog-header";
-import PostGrid from "@/components/blog/post-grid";
-import BlogSidebar from "@/components/blog/blog-sidebar";
-import { getAllPosts, getAllCategories } from "@/lib/mdx";
+import ClientBlogPageContent from "@/components/blog/client-blog-page-content";
+import { getAllPosts } from "@/lib/mdx";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,23 +13,13 @@ export const metadata: Metadata = {
 
 export default async function BlogPage() {
   const posts = await getAllPosts();
-  const categories = await getAllCategories();
   
   return (
     <main className="min-h-screen">
-      <Header />
+      <ClientHeader />
       <BlogHeader />
-      <section className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-3">
-            <PostGrid posts={posts} />
-          </div>
-          <div className="space-y-8">
-            <BlogSidebar categories={categories} recentPosts={posts.slice(0, 5)} />
-          </div>
-        </div>
-      </section>
-      <Footer />
+      <ClientBlogPageContent posts={posts} />
+      <ClientFooter />
     </main>
   );
 }

@@ -11,7 +11,7 @@ export default function PostGrid({ posts }: { posts: BlogPost[] }) {
     ? posts.filter(post => 
         post.title.toLowerCase().includes(filter.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(filter.toLowerCase()) ||
-        post.categories.some(category => category.toLowerCase().includes(filter.toLowerCase()))
+        (post.categories && post.categories.some(category => category.toLowerCase().includes(filter.toLowerCase())))
       )
     : posts;
 

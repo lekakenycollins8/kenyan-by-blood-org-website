@@ -1,9 +1,8 @@
 "use client";
 import { BlogPost } from "@/data/blog";
 import { Facebook, Twitter, Linkedin, Share2 } from "lucide-react";
-import { MDXRemote } from 'next-mdx-remote';
-import type { MDXRemoteSerializeResult, MDXRemoteProps } from 'next-mdx-remote';
-import mdxComponents from '@/components/mdx/mdx-components';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import ClientMDXWrapper from '@/components/mdx/client-mdx-wrapper';
 
 // Using MDX for rendering blog content with enhanced features
 export default function PostContent({ post, mdxSource }: { post: BlogPost, mdxSource: MDXRemoteSerializeResult }) {
@@ -80,7 +79,7 @@ export default function PostContent({ post, mdxSource }: { post: BlogPost, mdxSo
         
         {/* Article content */}
         <div className="prose prose-lg max-w-none prose-headings:mt-8 prose-headings:mb-4 prose-p:my-4 prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-li:ml-4 prose-img:my-8 prose-img:rounded-lg prose-a:text-red-600 hover:prose-a:text-red-800 prose-a:transition-colors prose-a:duration-200 prose-strong:font-bold prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-4 prose-blockquote:italic">
-          <MDXRemote {...mdxSource} components={mdxComponents} />
+          <ClientMDXWrapper mdxSource={mdxSource} />
         </div>
         
         {/* Tags */}
