@@ -1,4 +1,3 @@
-import { BRAND_COLORS } from "@/lib/constants";
 
 export default function BlogHeader() {
   return (

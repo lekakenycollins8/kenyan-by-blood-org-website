@@ -44,10 +44,11 @@ export async function generateMetadata(
   };
   
   // Add author to OpenGraph metadata only if it exists
-  if (postData.frontMatter.author?.name) {
+  if (postData.frontMatter.author?.name && metadata.openGraph) {
     metadata.openGraph = {
       ...metadata.openGraph,
       authors: [postData.frontMatter.author.name],
+      type: 'article', // Ensure type is explicitly set when updating
     };
   }
   

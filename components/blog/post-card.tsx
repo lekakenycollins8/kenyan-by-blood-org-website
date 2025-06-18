@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BlogPost } from "@/data/blog";
-import { Calendar, Clock, User } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 
 export default function PostCard({ post }: { post: BlogPost }) {
   return (
@@ -12,7 +12,7 @@ export default function PostCard({ post }: { post: BlogPost }) {
           src={post.coverImage}
           alt={post.title}
           fill
-          className="object-cover"
+          className="object-cover h-full w-full bg-center"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
