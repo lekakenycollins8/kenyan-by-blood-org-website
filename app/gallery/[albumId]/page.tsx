@@ -6,15 +6,16 @@ import { GALLERY_ALBUMS } from "@/data/gallery";
 import { notFound } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from 'next';
 
-type Props = {
-  params: { albumId: string }
+interface Props {
+  params: Promise<{ albumId: string }>
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const { albumId } = await Promise.resolve(params);
+  const { albumId } = await params;
   const album = GALLERY_ALBUMS.find(album => album.id === albumId);
   
   if (!album) {
@@ -32,8 +33,8 @@ export async function generateMetadata(
   };
 }
 
-export default async function AlbumPage({ params }: Props) {
-  const { albumId } = await Promise.resolve(params);
+export default async function AlbumPage({ params, searchParams }: Props) {
+  const { albumId } = await params;
   const album = GALLERY_ALBUMS.find(album => album.id === albumId);
   
   if (!album) {
