@@ -1,9 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import PostContent from "@/components/blog/post-content";
 import PostHeader from "@/components/blog/post-header";
-import BlogSidebar from "@/components/blog/blog-sidebar";
-import RelatedPosts from "@/components/blog/related-posts";
+import ClientBlogContent from "@/components/blog/client-blog-content";
 import { getPostBySlug, getAllPosts, getAllCategories } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from 'next';
@@ -93,25 +91,13 @@ export default async function BlogPostPage({ params }: Props) {
     <main className="min-h-screen">
       <Header />
       <PostHeader post={post} />
-      <section className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-3">
-            <PostContent post={post} mdxSource={postData.mdxSource} />
-            
-            {relatedPosts.length > 0 && (
-              <div className="mt-12">
-                <RelatedPosts posts={relatedPosts} />
-              </div>
-            )}
-          </div>
-          <div className="space-y-8">
-            <BlogSidebar 
-              categories={categories} 
-              recentPosts={allPosts.filter(p => p.slug !== resolvedParams.slug).slice(0, 5)} 
-            />
-          </div>
-        </div>
-      </section>
+      <ClientBlogContent
+        post={post}
+        mdxSource={postData.mdxSource}
+        relatedPosts={relatedPosts}
+        categories={categories}
+        recentPosts={allPosts.filter(p => p.slug !== resolvedParams.slug).slice(0, 5)}
+      />
       <Footer />
     </main>
   );
