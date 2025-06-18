@@ -148,7 +148,7 @@ export const GALLERY_ALBUMS: Album[] = [
     title: "Embu Weekend Plan Ushers Anniversary Blood Drive",
     description: "A blood drive event organized by the Embu Weekend Plan Ushers to celebrate their anniversary with a focus on community health.",
     coverImage: "/images/embu-ushers/embu-03.jpg",
-    date: "Novermber 9, 2024",
+    date: "November 9, 2024",
     location: "Pkemu Gardens, Embu",
     photos: [
       {
@@ -185,7 +185,7 @@ export const GALLERY_ALBUMS: Album[] = [
         id: "embu-4",
         title: "Donor donating Blood",
         description: "A donor giving blood during the event.",
-        imageUrl: "/images/embu-ushers/embu-04.jpg",
+        imageUrl: "/images/embu-ushers/embu-05.jpg",
         date: "November 9, 2024",
         eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
         location: "Pkemu Gardens, Embu",
