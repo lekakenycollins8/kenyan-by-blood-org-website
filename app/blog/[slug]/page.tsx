@@ -17,16 +17,16 @@ export async function generateStaticParams() {
 }
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  // Await params before using them
-  const resolvedParams = await Promise.resolve(params);
-  const postData = await getPostBySlug(resolvedParams.slug);
+  // Await params in Next.js 15
+  const { slug } = await params;
+  const postData = await getPostBySlug(slug);
   
   if (!postData) {
     return {
@@ -56,9 +56,9 @@ export async function generateMetadata(
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  // Await params before using them
-  const resolvedParams = await Promise.resolve(params);
-  const postData = await getPostBySlug(resolvedParams.slug);
+  // Await params in Next.js 15
+  const { slug } = await params;
+  const postData = await getPostBySlug(slug);
   
   if (!postData) {
     notFound();
@@ -68,7 +68,7 @@ export default async function BlogPostPage({ params }: Props) {
   
   // Create a post object with the necessary data
   const post = {
-    slug: resolvedParams.slug,
+    slug: slug,
     title: postData.frontMatter.title,
     excerpt: postData.frontMatter.excerpt,
     coverImage: postData.frontMatter.coverImage,
@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: Props) {
   
   // Get random related posts (since we don't use categories)
   const relatedPosts = allPosts
-    .filter(p => p.slug !== resolvedParams.slug) // Exclude current post
+    .filter(p => p.slug !== slug) // Exclude current post
     .sort(() => 0.5 - Math.random()) // Randomize order
     .slice(0, 3); // Limit to 3 related posts
   
@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: Props) {
         post={post}
         mdxSource={postData.mdxSource}
         relatedPosts={relatedPosts}
-        recentPosts={allPosts.filter(p => p.slug !== resolvedParams.slug).slice(0, 5)}
+        recentPosts={allPosts.filter(p => p.slug !== slug).slice(0, 5)}
       />
       <ClientFooter />
     </main>
