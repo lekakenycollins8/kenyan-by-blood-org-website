@@ -144,21 +144,21 @@ export const GALLERY_ALBUMS: Album[] = [
     ]
   },
   {
-    id: "embu-weekend-plan-ushers",
-    title: "Embu Weekend Plan Ushers Anniversary Blood Drive",
-    description: "A blood drive event organized by the Embu Weekend Plan Ushers to celebrate their anniversary with a focus on community health.",
+    id: "muranga-youth-empowernment-and-mentorship-event",
+    title: "Muranga Youth Empowerment and Mentorship Event",
+    description: "A blood drive event organized by the Muranga Youth to empower and mentor the youth in Muranga County.",
     coverImage: "/images/embu-ushers/embu-03.jpg",
-    date: "November 9, 2024",
-    location: "Pkemu Gardens, Embu",
+    date: "October 4-6, 2024",
+    location: "Muranga University & Michuki Technical",
     photos: [
       {
         id: "embu-1",
         title: "Donor Screening",
         description: "Medical professionals screening donors before the blood donation.",
         imageUrl: "/images/embu-ushers/embu-0.jpg",
-        date: "November 9, 2024",
-        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
-        location: "Pkemu Gardens, Embu",
+        date: "October 4-6, 2024",
+        eventName: "Muranga Youth Empowerment and Mentorship Event",
+        location: "Muranga University & Michuki Technical",
         tags: ["screening", "medical"]
       },
       {
@@ -166,9 +166,9 @@ export const GALLERY_ALBUMS: Album[] = [
         title: "Donor Registration",
         description: "Donors registering for the blood drive at the event.",
         imageUrl: "/images/embu-ushers/embu-02.jpg",
-        date: "November 9, 2024",
-        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
-        location: "Pkemu Gardens, Embu",
+        date: "October 4-6, 2024",
+        eventName: "Muranga Youth Empowerment and Mentorship Event",
+        location: "Muranga University & Michuki Technical",
         tags: ["registration", "volunteers"]
       },
       {
@@ -176,9 +176,9 @@ export const GALLERY_ALBUMS: Album[] = [
         title: "Donors Lined Up",
         description: "Donors lined up to give blood during the event.",
         imageUrl: "/images/embu-ushers/embu-04.jpg",
-        date: "November 9, 2024",
-        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
-        location: "Pkemu Gardens, Embu",
+        date: "October 4-6, 2024",
+        eventName: "Muranga Youth Empowerment and Mentorship Event",
+        location: "Muranga University & Michuki Technical",
         tags: ["donation", "medical"]
       },
       {
@@ -186,19 +186,19 @@ export const GALLERY_ALBUMS: Album[] = [
         title: "Donor donating Blood",
         description: "A donor giving blood during the event.",
         imageUrl: "/images/embu-ushers/embu-05.jpg",
-        date: "November 9, 2024",
-        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
-        location: "Pkemu Gardens, Embu",
+        date: "October 4-6, 2024",
+        eventName: "Muranga Youth Empowerment and Mentorship Event",
+        location: "Muranga University & Michuki Technical",
         tags: ["refreshments", "community"]
       },
       {
         id: "embu-5",
         title: "Organizing Team and Volunteers",
-        description: "The organizing team from KBBF and Embu Weekend Plan Ushers facilitating the blood drive.",
+        description: "The organizing team from KBBF and Muranga Youth Empowerment and Mentorship Event facilitating the blood drive.",
         imageUrl: "/images/embu-ushers/embu-06.jpg",
-        date: "November 9, 2024",
-        eventName: "Embu Weekend Plan Ushers Anniversary Blood Drive",
-        location: "Pkemu Gardens, Embu",
+        date: "October 4-6, 2024",
+        eventName: "Muranga Youth Empowerment and Mentorship Event",
+        location: "Muranga University & Michuki Technical",
         tags: ["team", "organization"]
       }
     ]

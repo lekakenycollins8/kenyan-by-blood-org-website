@@ -215,7 +215,7 @@ export default function WhyDonate({ data }: { data: WhyDonateProps }) {
               <Button
                 className="bg-[#DC241f] hover:bg-[#b01c19] text-white rounded-full group text-sm md:text-base py-2 px-4 md:py-3 md:px-6"
                 onClick={() => {
-                const donationForm = document.getElementById("donation-form")
+                const donationForm = document.getElementById("waystosupport")
                 if (donationForm) {
                   donationForm.scrollIntoView({ behavior: "smooth" })
                 }

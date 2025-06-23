@@ -62,7 +62,7 @@ export default function Hero({ data, scrollToForm }: { data: HeroData; scrollToF
           <div className="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
             <Button
               onClick={() => {
-                  const donationForm = document.getElementById("donation-form")
+                  const donationForm = document.getElementById("waystosupport")
                   if (donationForm) {
                     donationForm.scrollIntoView({ behavior: "smooth" })
                   }

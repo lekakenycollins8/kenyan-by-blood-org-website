@@ -87,8 +87,8 @@ export default function Footer() {
                 <p><span itemProp="streetAddress">Riara Center, Riara Road</span></p>
                 <p><span itemProp="addressLocality">Nairobi</span>, <span itemProp="addressCountry">Kenya</span></p>
               </div>
-              <p className="mt-2"><span itemProp="telephone">+254 720 572 793</span></p>
-              <p><span itemProp="email">derrick@iamkenyanbyblood.org</span></p>
+              <p className="mt-2"><span itemProp="telephone">+254 797 005 402</span></p>
+              <p><span itemProp="email">info@iamkenyanbyblood.org</span></p>
             </address>
           </div>
         </div>

@@ -63,7 +63,7 @@ export const donatePageData = {
       title: "Sponsor a Cause",
       description: "Fund a mobile unit, a drive, or ongoing programs long-term.",
       ctaLabel: "Become a Sponsor",
-      href: "/partner",
+      href: "/partners",
     },
   ],
 

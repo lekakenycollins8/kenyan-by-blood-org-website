@@ -43,7 +43,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/company/kenyanbybloodfoundation",
     icon: "linkedin",
   },
 ];

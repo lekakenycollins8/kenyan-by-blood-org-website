@@ -144,7 +144,7 @@ export default function Header() {
               ? "bg-[#DC241f] hover:bg-[#b01c19] text-white border-2 border-white"
               : "bg-[#006600] hover:bg-[#004d00] text-white border-2 border-white",
             )}
-            onClick={() => window.location.href = '/donate'}
+            onClick={() => window.location.href = '/donate#waystosupport'}
             >
             Donate Now
             </Button>
