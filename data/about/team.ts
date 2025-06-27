@@ -73,5 +73,11 @@ export const teamMembers: TeamMember[] = [
     name: "Lekakeny Collins",
     role: "IT and Development Lead",
     imageUrl: "/images/team/lekakeny.jpg",
+  },
+  {
+    id: "12",
+    name: "Anthony Odhek",
+    role: "Legal Counsel",
+    imageUrl: "/images/team/anthony.jpg",
   }
 ];

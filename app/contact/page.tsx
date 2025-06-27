@@ -16,13 +16,13 @@ import {
 } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import emailjs from '@emailjs/browser';
 
 // EmailJS configuration
 const EMAILJS_CONFIG = {
-  serviceId: 'your_service_id',
-  templateId: 'your_template_id',
-  publicKey: 'your_public_key',
-  // Add your EmailJS credentials here
+  serviceId: 'YOUR_SERVICE_ID', // Replace with your actual EmailJS service ID
+  templateId: 'YOUR_TEMPLATE_ID', // Replace with your actual EmailJS template ID
+  publicKey: 'YOUR_PUBLIC_KEY', // Replace with your actual EmailJS public key
 };
 
 // Hero Component
@@ -402,21 +402,26 @@ const handleInputChange = (e: FormDataChangeEvent): void => {
 
   const sendEmail = async () => {
     try {
-      // EmailJS integration would go here
-      // const result = await emailjs.sendForm(
-      //   EMAILJS_CONFIG.serviceId,
-      //   EMAILJS_CONFIG.templateId,
-      //   formRef.current,
-      //   EMAILJS_CONFIG.publicKey
-      // );
+      // Create template parameters from form data
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+        contactType: formData.contactType
+      };
       
-      // For demo purposes, we'll simulate the API call
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          console.log('Email sent with data:', formData);
-          resolve({ status: 200 });
-        }, 2000);
-      });
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        templateParams,
+        EMAILJS_CONFIG.publicKey
+      );
+      
+      console.log('Email sent successfully:', result.text);
+      return result;
     } catch (error) {
       console.error('EmailJS Error:', error);
       throw error;
@@ -457,7 +462,7 @@ const handleInputChange = (e: FormDataChangeEvent): void => {
       {submitted ? (
         <SuccessMessage />
       ) : (
-        <div ref={formRef} className="space-y-6">
+        <div className="space-y-6">
           <ContactTypeSelector 
             selectedType={formData.contactType}
             onTypeChange={handleInputChange}

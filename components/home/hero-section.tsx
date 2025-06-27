@@ -78,6 +78,7 @@ export default function HeroSection() {
                   variant="outline"
                   size="sm"
                   className="rounded-full border-[#DC241f] text-[#DC241f] hover:bg-[#DC241f] hover:text-white"
+                  onClick={() => window.location.href = '/donate'}
                 >
                   <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -98,6 +99,7 @@ export default function HeroSection() {
                   variant="outline"
                   size="sm"
                   className="rounded-full border-[#006600] text-[#006600] hover:bg-[#006600] hover:text-white"
+                  onClick={() => window.location.href = '/contact'}
                 >
                   <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -118,6 +120,7 @@ export default function HeroSection() {
                   variant="outline"
                   size="sm"
                   className="rounded-full border-black text-black hover:bg-black hover:text-white"
+                  onClick={() => window.location.href = '/contact'}
                 >
                   <ArrowRight className="h-4 w-4" />
                 </Button>
