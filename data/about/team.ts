@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "3",
-    name: "Benedict Kiriri",
+    name: "Benedict Kirira",
     role: "Media and Communications Lead",
     imageUrl: "/images/team/benedict.jpg",
   },
