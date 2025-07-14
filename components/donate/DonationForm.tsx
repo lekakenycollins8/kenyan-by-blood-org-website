@@ -127,7 +127,7 @@ export default function DonationForm() {
             <Phone className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
               <h4 className="font-bold mb-1">Need Help?</h4>
-              <p className="text-sm text-gray-600">Call us at +254 123 456 789 for assistance.</p>
+              <p className="text-sm text-gray-600">Call us at +254 797 005 402 for assistance.</p>
             </div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
