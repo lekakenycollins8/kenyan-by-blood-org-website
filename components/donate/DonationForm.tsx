@@ -38,7 +38,7 @@ export default function DonationForm() {
 
           <div className="p-8">
             <div className="mb-8">
-              <h3 className="text-xl font-bold mb-4">Select Amount</h3>
+              <h3 className="text-xl font-bold mb-4">Choose Your Support Option</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {donationForm.amounts.map((amount, index) => (
                   <div
@@ -59,7 +59,7 @@ export default function DonationForm() {
               {selectedAmount === "custom" && (
                 <div className="mt-4">
                   <label htmlFor="custom-amount" className="block text-sm font-medium text-gray-700 mb-1">
-                    Enter Custom Amount (KSh)
+                    Enter Your Preferred Contribution
                   </label>
                   <Input
                     id="custom-amount"

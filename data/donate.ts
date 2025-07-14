@@ -69,26 +69,26 @@ export const donatePageData = {
 
   donationForm: {
     title: "Make a Donation",
-    intro: "Choose your preferred amount and method to support our work.",
+    intro: "Choose how you'd like to support our life-saving work across Kenya.",
     ctaLabel: "Donate Securely",
     amounts: [
-      { value: 1000, label: "KSh 1,000", description: "Provides supplies for 5 blood donations" },
-      { value: 2500, label: "KSh 2,500", description: "Supports a local blood drive" },
-      { value: 5000, label: "KSh 5,000", description: "Funds transport to rural areas" },
-      { value: 10000, label: "KSh 10,000", description: "Sponsors a mobile collection unit" },
-      { value: "custom", label: "Custom Amount", description: "Every shilling makes a difference" },
+      { value: 1000, label: "Basic Support", description: "Provides essential supplies for multiple blood donations" },
+      { value: 2500, label: "Community Impact", description: "Supports organizing a local blood drive in underserved areas" },
+      { value: 5000, label: "Rural Outreach", description: "Funds transportation of blood and equipment to remote rural communities" },
+      { value: 10000, label: "Mobile Collection", description: "Sponsors a fully equipped mobile blood collection unit for a day" },
+      { value: "custom", label: "Custom Support", description: "Every contribution makes a difference in saving Kenyan lives" },
     ],
     methods: [
       {
         name: "M-Pesa",
-        instructions: "Paybill: 522533\nAccount: 7987279",
+        instructions: "Paybill: 522533\nAccount: 7987279\n\nYour donation will help us continue our mission of ensuring blood availability across Kenya.",
       },
       {
         name: "Bank Transfer",
-        instructions: "Account Name: Kenyan by Blood Foundation\nAccount No: 1340858835\nBank: Kenya Commercial Bank (KCB)",
+        instructions: "Account Name: Kenyan by Blood Foundation\nAccount No: 1340858835\nBank: Kenya Commercial Bank (KCB)\n\nPlease include your name and 'Donation' in the transfer reference.",
       },
     ],
-    trustMessage: "100% of your donation supports life-saving programs and resources.",
+    trustMessage: "100% of your donation supports life-saving programs and resources across Kenya.",
   },
 
   testimonials: [
