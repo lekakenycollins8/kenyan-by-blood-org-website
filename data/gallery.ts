@@ -202,5 +202,65 @@ export const GALLERY_ALBUMS: Album[] = [
         tags: ["team", "organization"]
       }
     ]
-  }
+  },
+  {
+    id: "kilifi-blood-drive",
+    title: "Kilifi County Blood Drive",
+    description: "Community blood drive event in Kilifi County bringing together local donors.",
+    coverImage: "/images/kilifi/Malindi1.jpg",
+    date: "July 17, 2025",
+    location: "Malindi High School,Kilifi County",
+    photos: [
+      {
+      id: "kilifi-1",
+      title: "Donors Waiting",
+      description: "Medical team collecting blood from willing donors.",
+      imageUrl: "/images/kilifi/Malindi1.jpg",
+      date: "July 17, 2025",
+      eventName: "Kilifi Blood Drive",
+      location: "Kilifi County",
+      tags: ["waiting", "donors"]
+      },
+      {
+      id: "kilifi-2",
+      title: "Blood Collection",
+      description: "Medical team collecting blood from willing donors.",
+      imageUrl: "/images/kilifi/Malindi2.jpg",
+      date: "July 17, 2025",
+      eventName: "Kilifi Blood Drive",
+      location: "Kilifi County",
+      tags: ["donation", "medical"]
+      },
+      {
+      id: "kilifi-3",
+      title: "Donation Process",
+      description: "Active blood donation in progress.",
+      imageUrl: "/images/kilifi/Malindi3.jpg",
+      date: "July 17, 2025",
+      eventName: "Kilifi Blood Drive",
+      location: "Kilifi County",
+      tags: ["donation", "medical"]
+      },
+      {
+      id: "kilifi-4",
+      title: "Community Participation",
+      description: "Medical team storing collected blood for further processing.",
+      imageUrl: "/images/kilifi/Malindi4.jpg",
+      date: "July 17, 2025",
+      eventName: "Kilifi Blood Drive",
+      location: "Kilifi County",
+      tags: ["community", "participation"]
+      },
+      {
+      id: "kilifi-5",
+      title: "Collection Team",
+      description: "KBBF and Partners group photo.",
+      imageUrl: "/images/kilifi/Malindi5.jpg",
+      date: "July 17, 2025",
+      eventName: "Kilifi Blood Drive",
+      location: "Kilifi County",
+      tags: ["team", "medical"]
+      }
+    ]
+    }
 ];
