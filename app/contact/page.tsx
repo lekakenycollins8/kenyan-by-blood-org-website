@@ -20,9 +20,9 @@ import emailjs from '@emailjs/browser';
 
 // EmailJS configuration
 const EMAILJS_CONFIG = {
-  serviceId: 'YOUR_SERVICE_ID', // Replace with your actual EmailJS service ID
-  templateId: 'YOUR_TEMPLATE_ID', // Replace with your actual EmailJS template ID
-  publicKey: 'YOUR_PUBLIC_KEY', // Replace with your actual EmailJS public key
+  serviceId: 'service_da36t6t', // Replace with your actual EmailJS service ID
+  templateId: 'template_bt6wfuv', // Replace with your actual EmailJS template ID
+  publicKey: 'p-tzxWydr0QIaU3x2', // Replace with your actual EmailJS public key
 };
 
 // Hero Component
