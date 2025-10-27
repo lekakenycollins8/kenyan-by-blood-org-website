@@ -88,7 +88,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "14",
-    name: "Ivy",
+    name: "Ivy Jemutai Kiptanui",
     role: "Digital Lead",
     imageUrl: "/images/team/ivy.jpeg",
   },
