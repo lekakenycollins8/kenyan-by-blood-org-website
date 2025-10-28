@@ -92,4 +92,10 @@ export const teamMembers: TeamMember[] = [
     role: "Digital Lead",
     imageUrl: "/images/team/ivy.jpeg",
   },
+  {
+    id: "15",
+    name: "Samson Kihuha",
+    role: "Fundraising Lead",
+    imageUrl: "/images/team/samson.jpeg",
+  },
 ];
