@@ -97,7 +97,7 @@ export default function ImpactSection() {
             <div className="bg-[#DC241f]/10 w-16 h-16 flex items-center justify-center rounded-full mb-6">
               <Users className="h-8 w-8 text-[#DC241f]" />
             </div>
-            <div className="text-4xl font-bold text-[#DC241f] mb-2">3,274</div>
+            <div className="text-4xl font-bold text-[#DC241f] mb-2">4,096</div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Number of Blood Donors</h3>
             <p className="text-gray-600 text-sm mt-auto">
               Dedicated individuals who have donated blood through our campaigns.
@@ -112,7 +112,7 @@ export default function ImpactSection() {
             <div className="bg-[#006600]/10 w-16 h-16 flex items-center justify-center rounded-full mb-6">
               <Calendar className="h-8 w-8 text-[#006600]" />
             </div>
-            <div className="text-4xl font-bold text-[#006600] mb-2">21</div>
+            <div className="text-4xl font-bold text-[#006600] mb-2">31</div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Number of Blood Drives</h3>
             <p className="text-gray-600 text-sm mt-auto">Successful blood donation events organized across Kenya.</p>
           </motion.div>
@@ -125,7 +125,7 @@ export default function ImpactSection() {
             <div className="bg-black/10 w-16 h-16 flex items-center justify-center rounded-full mb-6">
               <MapPin className="h-8 w-8 text-black" />
             </div>
-            <div className="text-4xl font-bold text-black mb-2">6</div>
+            <div className="text-4xl font-bold text-black mb-2">11</div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Number of Regional Locations</h3>
             <p className="text-gray-600 text-sm mt-auto">
               Strategic locations across Kenya where we've conducted blood drives.
