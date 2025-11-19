@@ -78,7 +78,7 @@ export default function ImpactSection() {
           className="text-center mb-12"
         >
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-            SNAPSHOT OF <span className="text-[#DC241f]">BLOOD DONATION ACHIEVEMENTS</span> in Kenya 2024
+            SNAPSHOT OF <span className="text-[#DC241f]">BLOOD DONATION ACHIEVEMENTS</span> in Kenya 2025
           </h3>
         </motion.div>
 
