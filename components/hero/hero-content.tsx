@@ -37,7 +37,7 @@ export default function HeroContent() {
             <path d="M0,5 C30,15 70,0 100,5" stroke="currentColor" strokeWidth="3" fill="none" />
           </svg>
         </span>{" "}
-        <span className="text-white">Across</span>{" "}
+        <span className="text-[#000000]">Across</span>{" "}
         <span className="text-[#000000]">K</span>
         <span className="text-[#DC241f]">e</span>
         <span className="text-[#000000]">n</span>
