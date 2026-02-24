@@ -168,8 +168,8 @@ export default function PartnerCTA({ data }: PartnerCTAProps) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 lg:mt-20 pt-8 sm:pt-12 border-t border-white/20">
           {[
             { label: "Active Partners", value: "30+" },
-            { label: "Lives Saved", value: "200K+" },
-            { label: "Counties Covered", value: "6+" },
+            { label: "Lives Saved", value: "20K+" },
+            { label: "Counties Covered", value: "15+" },
             { label: "Years of Impact", value: "3+" }
           ].map((stat, index) => (
             <div key={index} className="text-center">

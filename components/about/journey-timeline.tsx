@@ -17,7 +17,7 @@ export default function JourneyTimeline() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center justify-center space-x-2 bg-[#006600]/10 text-[#006600] px-4 py-2 rounded-full mb-4">
             <Clock className="h-4 w-4" />
-            <span className="font-semibold text-sm">Our Progress</span>
+            <span className="font-semibold text-sm">The Progress</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {journeyData.title}
@@ -88,11 +88,7 @@ export default function JourneyTimeline() {
                   </div>
                 )}
 
-                {milestone.current && (
-                  <div className="bg-[#006600]/10 text-[#006600] px-3 py-1 rounded-full text-xs font-medium inline-block">
-                    Current Year
-                  </div>
-                )}
+                {milestone.current}
               </div>
             </motion.div>
           ))}

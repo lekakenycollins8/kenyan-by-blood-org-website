@@ -54,8 +54,8 @@ export default function ImpactSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4">Blood Donation Impact in Kenya | Kenyan By Blood Foundation</h2>
           <p className="text-gray-600 text-base sm:text-lg px-4">
             Since our inception in September 2023, we have made significant strides in raising awareness and increasing
-            blood donations. Through organized blood drives across various counties, we have collected over 73,000
-            pints of blood, impacting the lives of an estimated 200,000 individuals.
+            blood donations. Through organized blood drives across various counties, we have collected over 5,000+
+            pints of blood, impacting the lives of an estimated 20,000 individuals.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function ImpactSection() {
           className="text-center mb-12"
         >
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-            SNAPSHOT OF <span className="text-[#DC241f]">BLOOD DONATION ACHIEVEMENTS</span> in Kenya 2025
+            SNAPSHOT OF <span className="text-[#DC241f]">BLOOD DONATION ACHIEVEMENTS</span> in Kenya since 2023
           </h3>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function ImpactSection() {
             <div className="bg-[#DC241f]/10 w-16 h-16 flex items-center justify-center rounded-full mb-6">
               <Users className="h-8 w-8 text-[#DC241f]" />
             </div>
-            <div className="text-4xl font-bold text-[#DC241f] mb-2">4,096</div>
+            <div className="text-4xl font-bold text-[#DC241f] mb-2">5,008</div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Number of Blood Donors</h3>
             <p className="text-gray-600 text-sm mt-auto">
               Dedicated individuals who have donated blood through our campaigns.
@@ -112,7 +112,7 @@ export default function ImpactSection() {
             <div className="bg-[#006600]/10 w-16 h-16 flex items-center justify-center rounded-full mb-6">
               <Calendar className="h-8 w-8 text-[#006600]" />
             </div>
-            <div className="text-4xl font-bold text-[#006600] mb-2">31</div>
+            <div className="text-4xl font-bold text-[#006600] mb-2">40</div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Number of Blood Drives</h3>
             <p className="text-gray-600 text-sm mt-auto">Successful blood donation events organized across Kenya.</p>
           </motion.div>
@@ -125,7 +125,7 @@ export default function ImpactSection() {
             <div className="bg-black/10 w-16 h-16 flex items-center justify-center rounded-full mb-6">
               <MapPin className="h-8 w-8 text-black" />
             </div>
-            <div className="text-4xl font-bold text-black mb-2">11</div>
+            <div className="text-4xl font-bold text-black mb-2">15</div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Number of Regional Locations</h3>
             <p className="text-gray-600 text-sm mt-auto">
               Strategic locations across Kenya where we've conducted blood drives.
@@ -144,8 +144,8 @@ export default function ImpactSection() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Blood Donation Lives Impacted in Kenya</h3>
               <p className="text-gray-600 mb-6">
-                Through our collective efforts, we've collected over 73,000 pints of blood, potentially saving or
-                improving the lives of an estimated 200,000 individuals across Kenya.
+                Through our collective efforts, we've collected over 5,000+ pints of blood, potentially saving or
+                improving the lives of an estimated 20,000 individuals across Kenya.
               </p>
               <div className="flex items-center text-sm text-gray-500">
                 <Activity className="h-4 w-4 mr-2 text-[#DC241f]" />
@@ -172,13 +172,13 @@ export default function ImpactSection() {
                       />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                      <div className="text-4xl font-bold text-[#DC241f]">73K+</div>
+                      <div className="text-4xl font-bold text-[#DC241f]">5K+</div>
                       <div className="text-sm text-gray-500">Pints Collected</div>
                     </div>
                   </div>
                 </div>
                 <div className="absolute top-0 right-0 bg-[#006600] text-white text-xs font-bold px-2 py-1 rounded-full">
-                  200K+ Lives Impacted
+                  20K+ Lives Impacted
                 </div>
               </div>
             </div>

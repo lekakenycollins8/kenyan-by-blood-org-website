@@ -1,5 +1,5 @@
 export const journeyData = {
-  title: "Our Journey So Far",
+  title: "The Journey So Far",
   milestones: [
     {
       year: "2019/20",

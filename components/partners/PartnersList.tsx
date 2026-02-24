@@ -346,7 +346,7 @@ export default function PartnersList({ partners }: PartnersListProps) {
                   <span className="text-green-700">Ministry of Health</span> Partnership
                 </h3>
                 <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                  The Ministry of Health through Kenya Blood Transfusion and Transplant Service wishes to partner with
+                  The Ministry of Health through Kenya National Blood Transfusion and Transplant Service partnered with
                   Kenyan By Blood Foundation to support the mobilization of blood donation, recruitment of donors,
                   equipping of blood transfusion facilities, training and capacity building, and research.
                 </p>

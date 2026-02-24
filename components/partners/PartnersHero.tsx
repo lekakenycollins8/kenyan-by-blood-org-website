@@ -143,8 +143,8 @@ export default function PartnersHero({ data, scrollToCTA }: HeroProps) {
           >
             {[
               { icon: Users, value: "30+", label: "Active Partners", color: "blue" },
-              { icon: Globe, value: "6+", label: "Counties Reached", color: "green" },
-              { icon: Heart, value: "200K+", label: "Lives Saved", color: "red" }
+              { icon: Globe, value: "15+", label: "Counties Reached", color: "green" },
+              { icon: Heart, value: "20K+", label: "Lives Saved", color: "red" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

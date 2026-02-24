@@ -73,7 +73,7 @@ export default function DonationForm() {
               )}
             </div>
 
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">Payment Method</h3>
               <Tabs defaultValue={donationForm.methods[0].name.toLowerCase()}>
                 <TabsList className="grid w-full grid-cols-3">
@@ -93,9 +93,9 @@ export default function DonationForm() {
                   </TabsContent>
                 ))}
               </Tabs>
-            </div>
+            </div> */}
 
-            <div className="flex items-center justify-between flex-wrap gap-4">
+            {/* <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center text-gray-600">
                 <Shield className="h-5 w-5 mr-2 text-[#006600]" />
                 <p className="text-sm">{donationForm.trustMessage}</p>
@@ -106,7 +106,7 @@ export default function DonationForm() {
               >
                 {donationForm.ctaLabel}
               </Button>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
@@ -116,13 +116,13 @@ export default function DonationForm() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
+          {/* <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
             <CreditCard className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
               <h4 className="font-bold mb-1">Secure Payments</h4>
               <p className="text-sm text-gray-600">All transactions are encrypted and secure.</p>
             </div>
-          </div>
+          </div> */}
           <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
             <Phone className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
@@ -130,13 +130,13 @@ export default function DonationForm() {
               <p className="text-sm text-gray-600">Call us at +254 797 005 402 for assistance.</p>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
+          {/* <div className="bg-white p-6 rounded-xl shadow-md flex items-start">
             <Building className="h-6 w-6 text-[#DC241f] mr-3 flex-shrink-0" />
             <div>
               <h4 className="font-bold mb-1">Tax Deductible</h4>
               <p className="text-sm text-gray-600">All donations are eligible for tax deductions.</p>
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

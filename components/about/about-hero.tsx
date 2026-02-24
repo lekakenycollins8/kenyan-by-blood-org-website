@@ -111,18 +111,10 @@ export default function AboutHero() {
       {/* Statistics Bar */}
       <div className="relative z-20 bg-black/80 backdrop-blur-sm py-3 sm:py-4 mt-auto">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 text-center">
             <div className="text-white">
               <div className="text-lg sm:text-2xl font-bold text-[#DC241f]">7</div>
               <div className="text-xs text-white/70 leading-tight">People need blood every 10 minutes</div>
-            </div>
-            <div className="text-white">
-              <div className="text-lg sm:text-2xl font-bold text-[#DC241f]">412K+</div>
-              <div className="text-xs text-white/70 leading-tight">Blood units collected in 2023</div>
-            </div>
-            <div className="text-white">
-              <div className="text-lg sm:text-2xl font-bold text-[#006600]">16%</div>
-              <div className="text-xs text-white/70 leading-tight">Of needed blood collected</div>
             </div>
             <div className="text-white">
               <div className="text-lg sm:text-2xl font-bold text-[#006600]">3</div>

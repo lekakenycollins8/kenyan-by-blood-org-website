@@ -35,8 +35,8 @@ export default function BloodDonationImpact() {
         animateCounter(0, impactData.achievements.stats[0].value, 2000, setDonorCount)
         animateCounter(0, impactData.achievements.stats[1].value, 1500, setDrivesCount)
         animateCounter(0, impactData.achievements.stats[2].value, 1000, setLocationsCount)
-        animateCounter(0, 73000, 2500, setPintsCount)
-        animateCounter(0, 200000, 2500, setLivesCount)
+        animateCounter(0, 5000, 2500, setPintsCount)
+        animateCounter(0, 20000, 2500, setLivesCount)
       }
     }
   }, [isInView, activeTab, targetNeedNumber])
@@ -55,8 +55,8 @@ export default function BloodDonationImpact() {
         animateCounter(0, impactData.achievements.stats[0].value, 2000, setDonorCount)
         animateCounter(0, impactData.achievements.stats[1].value, 1500, setDrivesCount)
         animateCounter(0, impactData.achievements.stats[2].value, 1000, setLocationsCount)
-        animateCounter(0, 73000, 2500, setPintsCount)
-        animateCounter(0, 200000, 2500, setLivesCount)
+        animateCounter(0, 5000, 2500, setPintsCount)
+        animateCounter(0, 20000, 2500, setLivesCount)
       }, 200)
     }
   }, [activeTab, isInView])
@@ -206,6 +206,27 @@ export default function BloodDonationImpact() {
               <motion.div
                 variants={fadeIn}
                 custom={0}
+                className="max-w-4xl mx-auto bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-md border border-gray-100 mb-12"
+              >
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="rounded-full bg-white p-3 shadow-sm">
+                      <Quote className="h-8 w-8 text-red-600 opacity-80" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-lg md:text-xl italic text-gray-700 mb-6">{problemStatsData.quote.text}</p>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">{problemStatsData.quote.source}</p>
+                      <p className="text-sm text-gray-600">{"Blood Donor"}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn}
+                custom={1}
                 className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 mb-12 max-w-2xl mx-auto"
               >
                 <div className="flex flex-col items-center justify-center">
@@ -223,7 +244,7 @@ export default function BloodDonationImpact() {
                 {problemStatsData.stats.slice(0, 4).map((stat, index) => (
                   <motion.div
                     key={index}
-                    custom={index + 1}
+                    custom={index + 2}
                     variants={fadeIn}
                     className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all group"
                   >
@@ -240,27 +261,6 @@ export default function BloodDonationImpact() {
                   </motion.div>
                 ))}
               </div>
-
-              <motion.div
-                variants={fadeIn}
-                custom={5}
-                className="max-w-4xl mx-auto bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-md border border-gray-100"
-              >
-                <div className="flex flex-col md:flex-row items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="rounded-full bg-white p-3 shadow-sm">
-                      <Quote className="h-8 w-8 text-red-600 opacity-80" />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-lg md:text-xl italic text-gray-700 mb-6">{problemStatsData.quote.text}</p>
-                    <div>
-                      <p className="text-sm font-bold text-gray-900">{problemStatsData.quote.source}</p>
-                      <p className="text-sm text-gray-600">{"Blood Donor"}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           ) : (
             <motion.div
