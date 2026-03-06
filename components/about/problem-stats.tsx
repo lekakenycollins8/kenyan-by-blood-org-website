@@ -232,7 +232,7 @@ export default function BloodDonationImpact() {
                 <div className="flex flex-col items-center justify-center">
                   <div className="text-5xl md:text-6xl font-bold text-red-600 mb-4">
                     {isInView ? needCount.toLocaleString() : 0}
-                    <span className="text-2xl ml-1">units</span>
+                    <span className="text-2xl ml-1">minutes</span>
                   </div>
                   <p className="text-xl font-medium text-gray-800">
                     {problemStatsData.mainStat.replace(/\d+/, '').trim()}

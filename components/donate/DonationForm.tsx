@@ -2,9 +2,9 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
+import { useRouter } from "next/navigation"
 import { donatePageData } from "@/data/donate"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Shield, CreditCard, Phone, Building } from "lucide-react"
 
@@ -13,13 +13,14 @@ export default function DonationForm() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [selectedAmount, setSelectedAmount] = useState(donationForm.amounts[1].value)
-  const [customAmount, setCustomAmount] = useState("")
+  const router = useRouter()
 
   const handleAmountSelect = (value: number | string) => {
-    setSelectedAmount(value)
-    if (value !== "custom") {
-      setCustomAmount("")
+    if (value === "custom") {
+      router.push("/contact")
+      return
     }
+    setSelectedAmount(value)
   }
 
   return (
@@ -55,22 +56,6 @@ export default function DonationForm() {
                   </div>
                 ))}
               </div>
-
-              {selectedAmount === "custom" && (
-                <div className="mt-4">
-                  <label htmlFor="custom-amount" className="block text-sm font-medium text-gray-700 mb-1">
-                    Enter Your Preferred Contribution
-                  </label>
-                  <Input
-                    id="custom-amount"
-                    type="number"
-                    placeholder="Enter amount"
-                    value={customAmount}
-                    onChange={(e) => setCustomAmount(e.target.value)}
-                    className="max-w-xs"
-                  />
-                </div>
-              )}
             </div>
 
             {/* <div className="mb-8">
