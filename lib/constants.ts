@@ -10,7 +10,6 @@ export const BRAND_COLORS = {
 export const NAV_LINKS = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Donate", path: "/donate" },
   { 
     name: "Resources", 
     path: "#", 
