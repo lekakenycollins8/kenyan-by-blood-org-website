@@ -262,5 +262,205 @@ export const GALLERY_ALBUMS: Album[] = [
       tags: ["team", "medical"]
       }
     ]
-    }
+    },
+  {
+    id: "truelight-bible-center-peace-in-action-blood-drive",
+    title: "True Light Bible Center: Peace in Action: A Life Saving Donation",
+    description: "Blood donation drive organized by True Light Bible Center in Nairobi in celebration of Peace in Action.",
+    coverImage: "/images/truelight/tbc-0.jpeg",
+    date: "March 22, 2026",
+    location: "True Light Bible Center, Nairobi",
+    photos: [
+      {
+        id: "truelight-1",
+        title: "Donors Enrolled",
+        description: "Donors enrolled for the blood drive.",
+        imageUrl: "/images/truelight/tbc-0.jpeg",
+        date: "March 22, 2026",
+        eventName: "True Light Bible Center: Peace in Action Blood Drive",
+        location: "True Light Bible Center, Nairobi",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "truelight-2",
+        title: "Donor Registration",
+        description: "Donors registering for the blood drive.",
+        imageUrl: "/images/truelight/tbc-1.jpeg",
+        date: "March 22, 2026",
+        eventName: "True Light Bible Center: Peace in Action Blood Drive",
+        location: "True Light Bible Center, Nairobi",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "truelight-3",
+        title: "Donor Screening",
+        description: "Donors undergoing screening before donation.",
+        imageUrl: "/images/truelight/tbc-2.jpeg",
+        date: "March 22, 2026",
+        eventName: "True Light Bible Center: Peace in Action Blood Drive",
+        location: "True Light Bible Center, Nairobi",
+        tags: ["screening", "medical"]
+      },
+      {
+        id: "truelight-4",
+        title: "Donors giving blood",
+        description: "Donors giving blood during the event.",
+        imageUrl: "/images/truelight/tbc-3.jpeg",
+        date: "March 22, 2026",
+        eventName: "True Light Bible Center: Peace in Action Blood Drive",
+        location: "True Light Bible Center, Nairobi",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "truelight-5",
+        title: "Donors being attended to by medics",
+        description: "Donors being attended to by medics during the event.",
+        imageUrl: "/images/truelight/tbc-4.jpeg",
+        date: "March 22, 2026",
+        eventName: "True Light Bible Center: Peace in Action Blood Drive",
+        location: "True Light Bible Center, Nairobi",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "truelight-6",
+        title: "Blood samples collected",
+        description: "Blood samples collected for testing.",
+        imageUrl: "/images/truelight/tbc-5.jpeg",
+        date: "March 22, 2026",
+        eventName: "True Light Bible Center: Peace in Action Blood Drive",
+        location: "True Light Bible Center, Nairobi",
+        tags: ["team", "organization"]
+      }
+    ]
+  },
+  {
+    id: "nairobi-chapel-langata-blood-drive",
+    title: "Nairobi Chapel Langata Blood Drive",
+    description: "Blood donation drive organized by Nairobi Chapel Langata in Nairobi.",
+    coverImage: "/images/nairobi-chapel/nairobi-chapel-0.jpeg",
+    date: "March 29, 2026",
+    location: "Nairobi Chapel Langata, Nairobi",
+    photos: [
+      {
+        id: "nairobi-chapel-1",
+        title: "Donors Enrolled",
+        description: "Donors enrolled for the blood drive.",
+        imageUrl: "/images/nairobi-chapel/nairobi-chapel-0.jpeg",
+        date: "March 29, 2026",
+        eventName: "Nairobi Chapel Langata Blood Drive",
+        location: "Nairobi Chapel Langata, Nairobi",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "nairobi-chapel-2",
+        title: "Donor Registration",
+        description: "Donors registering for the blood drive.",
+        imageUrl: "/images/nairobi-chapel/nairobi-chapel-1.jpeg",
+        date: "March 29, 2026",
+        eventName: "Nairobi Chapel Langata Blood Drive",
+        location: "Nairobi Chapel Langata, Nairobi",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "nairobi-chapel-3",
+        title: "Donor Screening",
+        description: "Donors undergoing screening before donation.",
+        imageUrl: "/images/nairobi-chapel/nairobi-chapel-2.jpeg",
+        date: "March 29, 2026",
+        eventName: "Nairobi Chapel Langata Blood Drive",
+        location: "Nairobi Chapel Langata, Nairobi",
+        tags: ["screening", "medical"]
+      },
+      {
+        id: "nairobi-chapel-4",
+        title: "Medics attending to donors",
+        description: "Medics attending to donors",
+        imageUrl: "/images/nairobi-chapel/nairobi-chapel-3.jpeg",
+        date: "March 29, 2026",
+        eventName: "Nairobi Chapel Langata Blood Drive",
+        location: "Nairobi Chapel Langata, Nairobi",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "nairobi-chapel-5",
+        title: "Blood donated",
+        description: "Blood donated",
+        imageUrl: "/images/nairobi-chapel/nairobi-chapel-4.jpeg",
+        date: "March 29, 2026",
+        eventName: "Nairobi Chapel Langata Blood Drive",
+        location: "Nairobi Chapel Langata, Nairobi",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "nairobi-chapel-6",
+        title: "Medic checking blood donated supply",
+        description: "Medic checking blood donated supply",
+        imageUrl: "/images/nairobi-chapel/nairobi-chapel-5.jpeg",
+        date: "March 29, 2026",
+        eventName: "Nairobi Chapel Langata Blood Drive",
+        location: "Nairobi Chapel Langata, Nairobi",
+        tags: ["team", "organization"]
+      }
+    ]
+  },
+  {
+    id: "braeburn-school-gitanga-road-blood-drive",
+    title: "Braeburn School Gitanga Road Blood Drive",
+    description: "Blood donation drive organized by Braeburn School Gitanga Road in Nairobi.",
+    coverImage: "/images/braeburn/braeburn-0.jpeg",
+    date: "June 14, 2026",
+    location: "Braeburn School Gitanga Road, Nairobi",
+    photos: [
+      {
+        id: "braeburn-1",
+        title: "Donors Screening",
+        description: "Donors undergoing screening.",
+        imageUrl: "/images/braeburn/braeburn-0.jpeg",
+        date: "June 14, 2026",
+        eventName: "Braeburn School Gitanga Road Blood Drive",
+        location: "Braeburn School Gitanga Road, Nairobi",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "braeburn-2",
+        title: "Donation Process",
+        description: "Donors in seats donating.",
+        imageUrl: "/images/braeburn/braeburn-1.jpeg",
+        date: "June 14, 2026",
+        eventName: "Braeburn School Gitanga Road Blood Drive",
+        location: "Braeburn School Gitanga Road, Nairobi",
+        tags: ["registration", "volunteers"]
+      },
+      {
+        id: "braeburn-3",
+        title: "Donation Process",
+        description: "Donor selfie during donation.",
+        imageUrl: "/images/braeburn/braeburn-2.jpeg",
+        date: "June 14, 2026",
+        eventName: "Braeburn School Gitanga Road Blood Drive",
+        location: "Braeburn School Gitanga Road, Nairobi",
+        tags: ["screening", "medical"]
+      },
+      {
+        id: "braeburn-4",
+        title: "Donor Giving Blood",
+        description: "Donor giving blood during the event.",
+        imageUrl: "/images/braeburn/braeburn-3.jpeg",
+        date: "June 14, 2026",
+        eventName: "Braeburn School Gitanga Road Blood Drive",
+        location: "Braeburn School Gitanga Road, Nairobi",
+        tags: ["donation", "medical"]
+      },
+      {
+        id: "braeburn-5",
+        title: "Donor giving blood",
+        description: "Donor giving blood.",
+        imageUrl: "/images/braeburn/braeburn-4.jpeg",
+        date: "June 14, 2026",
+        eventName: "Braeburn School Gitanga Road Blood Drive",
+        location: "Braeburn School Gitanga Road, Nairobi",
+        tags: ["team", "organization"]
+      }
+    ]
+  }
 ];

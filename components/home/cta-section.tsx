@@ -47,7 +47,7 @@ export default function CTASection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/20 rounded-full shadow-lg"
+                className="border-white rounded-full text-black"
               >
                 Register as Volunteer
               </Button>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function GalleryPreview() {
   // Get the latest 3 albums for the preview
-  const previewAlbums = GALLERY_ALBUMS.slice(0, 3);
+  const previewAlbums = GALLERY_ALBUMS.slice(0, 5).concat(GALLERY_ALBUMS.slice(6, 7));
 
   return (
     <section className="py-16 bg-gray-50">

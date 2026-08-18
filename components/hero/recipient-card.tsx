@@ -16,7 +16,7 @@ export default function RecipientCard() {
       {/* Main Image */}
       <div className="aspect-[4/5] relative">
         <Image
-          src="/images/blood-recipient.jpg"
+          src="/images/hero-image1.jpg"
           alt="Smiling blood transfusion recipient"
           fill
           className="object-cover object-center"
@@ -37,18 +37,6 @@ export default function RecipientCard() {
         {/* Testimonial overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="flex items-start mb-4">
-              <div className="h-10 w-10 rounded-full bg-[#006600] flex items-center justify-center mr-3 flex-shrink-0">
-                <span className="text-white font-bold">JM</span>
-              </div>
-              <div>
-                <h3 className="font-semibold">Blood Recipient, Nairobi</h3>
-              </div>
-            </div>
-            <p className="text-sm italic mb-4">
-              "The blood donation I received saved my life after childbirth complications. I'm forever grateful to the
-              donors who made it possible for me to see my daughter grow."
-            </p>
             <Link href="/#impact" className="text-[#DC241f] text-sm font-medium hover:underline flex items-center">
               Read more about our impact <ArrowRight size={14} className="ml-1" />
             </Link>
